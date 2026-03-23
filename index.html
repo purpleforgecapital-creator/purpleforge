@@ -18,26 +18,17 @@
   --light-txt:  #9B9A94;
   --navy:       #1E2B3A;
   --navy2:      #263547;
-  --navy3:      #2E3F54;
   --gold:       #9A7B3F;
   --gold2:      #B8953F;
   --gold-lt:    #D4AE6A;
-  --gold-pale:  #F5EDD9;
   --rule:       rgba(28,27,24,0.10);
   --rule2:      rgba(28,27,24,0.16);
-  --rule-gold:  rgba(154,123,63,0.30);
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
 
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2.8rem;height:72px;
-  background:var(--white);
-  border-bottom:1px solid var(--rule2);
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
 .logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
 .logo-hex{width:46px;height:46px;flex-shrink:0;}
 .logo-text{line-height:1.2;}
@@ -47,55 +38,18 @@ nav{
 .nav-links{display:flex;align-items:center;gap:2rem;}
 .nav-links a{font-size:0.8rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;transition:color 0.2s;}
 .nav-links a:hover{color:var(--ink);}
-.nav-cta{
-  background:var(--navy);color:var(--white);
-  padding:0.6rem 1.5rem;font-size:0.78rem;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  border:none;cursor:pointer;border-radius:2px;
-  font-family:'Barlow Condensed',sans-serif;transition:background 0.2s;
-}
+.nav-cta{background:var(--navy);color:var(--white);padding:0.6rem 1.5rem;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;transition:background 0.2s;}
 .nav-cta:hover{background:var(--navy2);}
 
 /* HERO */
-.hero{
-  min-height:100vh;
-  display:grid;grid-template-columns:1fr 1fr;
-  align-items:stretch;
-  padding-top:72px;
-}
-.hero-left{
-  background:var(--off);
-  padding:4rem 3.5rem 4rem 3rem;
-  display:flex;flex-direction:column;justify-content:center;
-  border-right:1px solid var(--rule2);
-  position:relative;
-}
-.hero-left::after{
-  content:'';position:absolute;top:4rem;left:3rem;
-  width:40px;height:3px;background:var(--gold);
-}
-.hero-right-panel{
-  background:var(--navy);
-  display:flex;flex-direction:column;justify-content:center;
-  padding:3.5rem 3rem;position:relative;
-}
-.hero-right-panel::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--gold);
-}
-.tag{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  font-size:0.68rem;font-weight:600;
-  letter-spacing:0.2em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:2rem;margin-top:1.5rem;
-}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding-top:72px;}
+.hero-left{background:var(--off);padding:4rem 3.5rem 4rem 3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule2);position:relative;}
+.hero-left::after{content:'';position:absolute;top:4rem;left:3rem;width:40px;height:3px;background:var(--gold);}
+.hero-right-panel{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:3.5rem 3rem;position:relative;}
+.hero-right-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);}
+.tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;margin-top:1.5rem;}
 .tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
-h1{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(3.2rem,5.5vw,5.2rem);
-  line-height:0.95;letter-spacing:0.02em;
-  color:var(--ink);margin-bottom:1.5rem;
-}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,5.5vw,5.2rem);line-height:0.95;letter-spacing:0.02em;color:var(--ink);margin-bottom:1.5rem;}
 h1 span{color:var(--gold);}
 .hero-desc{font-size:1rem;line-height:1.85;color:var(--muted);max-width:420px;margin-bottom:2.5rem;font-weight:300;}
 .offer-pills{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
@@ -106,7 +60,7 @@ h1 span{color:var(--gold);}
 
 /* RIGHT PANEL */
 .panel-headline{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);margin-bottom:0.35rem;line-height:1.2;}
-.panel-sub{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1.75rem;font-weight:300;letter-spacing:0.02em;}
+.panel-sub{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1.75rem;font-weight:300;}
 .panel-cta-btn{background:var(--gold);color:var(--white);padding:0.95rem;font-size:0.9rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;transition:background 0.2s;width:100%;margin-bottom:1.75rem;}
 .panel-cta-btn:hover{background:var(--gold2);}
 .panel-features{display:flex;flex-direction:column;gap:0.85rem;}
@@ -133,8 +87,8 @@ h1 span{color:var(--gold);}
 .lead-form{display:flex;flex-direction:column;gap:0.9rem;}
 .fgroup{display:flex;flex-direction:column;gap:0.35rem;}
 .fgroup label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);font-weight:600;}
-.fgroup input,.fgroup select{background:var(--off);border:1px solid var(--rule2);color:var(--ink);padding:0.7rem 0.9rem;font-size:0.88rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color 0.2s,background 0.2s;border-radius:2px;width:100%;}
-.fgroup input:focus,.fgroup select:focus{border-color:var(--gold);background:var(--white);}
+.fgroup input,.fgroup select,.fgroup textarea{background:var(--off);border:1px solid var(--rule2);color:var(--ink);padding:0.7rem 0.9rem;font-size:0.88rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color 0.2s,background 0.2s;border-radius:2px;width:100%;}
+.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{border-color:var(--gold);background:var(--white);}
 .fgroup select option{background:var(--white);color:var(--ink);}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;}
 .submit-btn{background:var(--navy);color:var(--white);padding:0.95rem;font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;transition:background 0.2s,opacity 0.2s;margin-top:0.3rem;width:100%;}
@@ -143,9 +97,9 @@ h1 span{color:var(--gold);}
 .form-trust{display:flex;align-items:center;gap:0.5rem;font-size:0.7rem;color:var(--light-txt);margin-top:0.5rem;}
 .form-trust::before{content:'🔒';font-size:0.7rem;}
 .contact-quick{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:0.75rem;}
-.cq-item{color:var(--navy);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;letter-spacing:0.02em;}
+.cq-item{color:var(--navy);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
 .cq-item:hover{color:var(--gold);}
-.form-msg{display:none;padding:0.85rem 1rem;border-radius:2px;font-size:0.85rem;font-weight:500;text-align:center;margin-top:0.5rem;letter-spacing:0.02em;}
+.form-msg{display:none;padding:0.85rem 1rem;border-radius:2px;font-size:0.85rem;font-weight:500;text-align:center;margin-top:0.5rem;}
 .form-msg.success{display:block;background:#f0faf5;border:1px solid #a7d7ba;color:#1a5c38;}
 .form-msg.error{display:block;background:#fdf2f2;border:1px solid #e4a5a5;color:#7a1f1f;}
 
@@ -241,7 +195,7 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;}
   .hero-right-panel{padding:2.5rem;}
-  .hero-right-panel::before{top:0;left:0;right:0;bottom:auto;width:auto;height:3px;}
+  .hero-right-panel::before{height:3px;}
   .hero-left{padding:3.5rem 2rem 2.5rem;}
   .about-grid,.why-grid{grid-template-columns:1fr;}
   .bottom-cta{flex-direction:column;text-align:center;}
@@ -294,8 +248,8 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <div class="offer-pills">
       <span class="pill">&#10003;&nbsp; No Repairs Needed</span>
       <span class="pill">&#10003;&nbsp; No Agent Fees</span>
-      <span class="pill">&#10003;&nbsp; Any Condition</span>
-      <span class="pill">&#10003;&nbsp; Close in Days</span>
+      <span class="pill">&#10003;&nbsp; No Closing Costs</span>
+      <span class="pill">&#10003;&nbsp; Close on Your Timeline</span>
     </div>
     <div class="hero-stats">
       <div><div class="stat-n">100+</div><div class="stat-l">Homes Purchased</div></div>
@@ -332,52 +286,54 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <button class="popup-close" onclick="closePopup()">&#10005;</button>
     <div class="form-headline">Get Your Free<br/>Cash Offer Today</div>
     <div class="form-sub">No obligation &nbsp;&middot;&nbsp; Response within 24 hours &nbsp;&middot;&nbsp; 100% confidential</div>
-    <div class="lead-form">
-      <div class="frow">
-        <div class="fgroup"><label>First Name *</label><input type="text" id="firstName" placeholder="Jane" required/></div>
-        <div class="fgroup"><label>Last Name *</label><input type="text" id="lastName" placeholder="Smith" required/></div>
+    <form id="leadForm" onsubmit="submitForm(event)">
+      <div class="lead-form">
+        <div class="frow">
+          <div class="fgroup"><label>First Name *</label><input type="text" name="firstName" id="firstName" placeholder="Jane" required/></div>
+          <div class="fgroup"><label>Last Name *</label><input type="text" name="lastName" id="lastName" placeholder="Smith" required/></div>
+        </div>
+        <div class="fgroup"><label>Property Address *</label><input type="text" name="address" id="address" placeholder="123 Main Street" required/></div>
+        <div class="frow">
+          <div class="fgroup"><label>City *</label><input type="text" name="city" id="city" placeholder="Quincy" required/></div>
+          <div class="fgroup"><label>State *</label><input type="text" name="state" id="state" placeholder="MA" required/></div>
+        </div>
+        <div class="frow">
+          <div class="fgroup"><label>Phone *</label><input type="tel" name="phone" id="phone" placeholder="(508) 377-6864" required/></div>
+          <div class="fgroup"><label>Email *</label><input type="email" name="email" id="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="fgroup">
+          <label>Why Are You Selling?</label>
+          <select name="reason" id="reason">
+            <option value="">Select a reason...</option>
+            <option value="Inherited property">Inherited property</option>
+            <option value="Facing foreclosure">Facing foreclosure</option>
+            <option value="Divorce / life change">Divorce / life change</option>
+            <option value="Relocating">Relocating</option>
+            <option value="Property needs too many repairs">Property needs too many repairs</option>
+            <option value="Behind on payments">Behind on payments</option>
+            <option value="Tired landlord">Tired landlord</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="fgroup">
+          <label>Property Condition</label>
+          <select name="condition" id="condition">
+            <option value="">Select condition...</option>
+            <option value="Move-in ready">Move-in ready</option>
+            <option value="Needs minor repairs">Needs minor repairs</option>
+            <option value="Needs major repairs">Needs major repairs</option>
+            <option value="Distressed / damaged">Distressed / damaged</option>
+          </select>
+        </div>
+        <button class="submit-btn" type="submit" id="submitBtn">Get My Free Cash Offer &rarr;</button>
+        <div id="formMessage" class="form-msg"></div>
+        <div class="form-trust">Your information is private and never shared with third parties.</div>
+        <div class="contact-quick">
+          <a href="tel:5083776864" class="cq-item">(508) 377-6864</a>
+          <a href="mailto:purpleforgecapital@gmail.com" class="cq-item">purpleforgecapital@gmail.com</a>
+        </div>
       </div>
-      <div class="fgroup"><label>Property Address *</label><input type="text" id="address" placeholder="123 Main Street" required/></div>
-      <div class="frow">
-        <div class="fgroup"><label>City *</label><input type="text" id="city" placeholder="Quincy" required/></div>
-        <div class="fgroup"><label>State *</label><input type="text" id="state" placeholder="MA" required/></div>
-      </div>
-      <div class="frow">
-        <div class="fgroup"><label>Phone *</label><input type="tel" id="phone" placeholder="(508) 377-6864" required/></div>
-        <div class="fgroup"><label>Email *</label><input type="email" id="email" placeholder="your@email.com" required/></div>
-      </div>
-      <div class="fgroup">
-        <label>Why Are You Selling?</label>
-        <select id="reason">
-          <option value="">Select a reason...</option>
-          <option>Inherited property</option>
-          <option>Facing foreclosure</option>
-          <option>Divorce / life change</option>
-          <option>Relocating</option>
-          <option>Property needs too many repairs</option>
-          <option>Behind on payments</option>
-          <option>Tired landlord</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="fgroup">
-        <label>Property Condition</label>
-        <select id="condition">
-          <option value="">Select condition...</option>
-          <option>Move-in ready</option>
-          <option>Needs minor repairs</option>
-          <option>Needs major repairs</option>
-          <option>Distressed / damaged</option>
-        </select>
-      </div>
-      <button class="submit-btn" type="button" onclick="submitForm()">Get My Free Cash Offer &rarr;</button>
-      <div id="formMessage" class="form-msg"></div>
-      <div class="form-trust">Your information is private and never shared with third parties.</div>
-      <div class="contact-quick">
-        <a href="tel:5083776864" class="cq-item">(508) 377-6864</a>
-        <a href="mailto:purpleforgecapital@gmail.com" class="cq-item">purpleforgecapital@gmail.com</a>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -399,12 +355,12 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <div class="process-step">
       <div class="step-num">03</div>
       <div class="step-title">Choose Your Closing Date</div>
-      <p class="step-desc">You select when to close — on a timeline that works for you. We handle all paperwork from start to finish.</p>
+      <p class="step-desc">You pick when to close — a timeline that works for you. We handle all paperwork from start to finish.</p>
     </div>
     <div class="process-step">
       <div class="step-num">04</div>
       <div class="step-title">Collect Your Cash</div>
-      <p class="step-desc">Walk away with cash in hand on your schedule. No hidden fees, no surprises. Just a clean, straightforward sale.</p>
+      <p class="step-desc">Walk away with cash in hand on your schedule. No hidden fees, no surprises — just a clean, straightforward sale.</p>
     </div>
   </div>
 </section>
@@ -443,36 +399,12 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
   <h2>We Buy in Any Situation</h2>
   <p class="section-sub">Whatever your circumstances, we have worked with homeowners in similar situations and we are here to help — without judgment.</p>
   <div class="sit-grid">
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Inherited Property</div>
-      <p class="sit-desc">Dealing with a probate property or inherited home you do not want to manage? We make the process quick, respectful, and straightforward.</p>
-    </div>
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Facing Foreclosure</div>
-      <p class="sit-desc">Behind on payments or in foreclosure? We move fast to help you avoid further damage to your credit and walk away with cash.</p>
-    </div>
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Relocating</div>
-      <p class="sit-desc">Moving for work or family? Skip the listings, showings, and months of waiting — we buy on your timeline.</p>
-    </div>
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Major Repairs Needed</div>
-      <p class="sit-desc">Fire damage, foundation issues, outdated systems — we buy homes as-is. You do not spend a single dollar fixing anything.</p>
-    </div>
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Divorce / Life Change</div>
-      <p class="sit-desc">A fast, private cash sale can bring closure and clarity during a difficult transition, letting you move forward on your terms.</p>
-    </div>
-    <div class="sit-card">
-      <div class="sit-marker"></div>
-      <div class="sit-title">Tired Landlord</div>
-      <p class="sit-desc">Done managing tenants and maintenance? We buy rental properties and multi-families — occupied or vacant, any condition.</p>
-    </div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Inherited Property</div><p class="sit-desc">Dealing with a probate property or inherited home you do not want to manage? We make the process quick, respectful, and straightforward.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Facing Foreclosure</div><p class="sit-desc">Behind on payments or in foreclosure? We move fast to help you avoid further damage to your credit and walk away with cash.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Relocating</div><p class="sit-desc">Moving for work or family? Skip the listings, showings, and months of waiting — we buy on your timeline.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Major Repairs Needed</div><p class="sit-desc">Fire damage, foundation issues, outdated systems — we buy homes as-is. You do not spend a single dollar fixing anything.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Divorce / Life Change</div><p class="sit-desc">A fast, private cash sale can bring closure and clarity during a difficult transition, letting you move forward on your terms.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Tired Landlord</div><p class="sit-desc">Done managing tenants and maintenance? We buy rental properties and multi-families — occupied or vacant, any condition.</p></div>
   </div>
 </section>
 
@@ -483,46 +415,16 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
       <div class="section-tag">Why Choose Us</div>
       <h2>Skip the Hassle.<br/>Sell Direct.</h2>
       <div class="why-list">
-        <div class="why-item">
-          <div class="why-num">01</div>
-          <div>
-            <h4>Sell As-Is — Any Condition</h4>
-            <p>Do not spend a dollar fixing your home. We purchase properties in any condition — fire damage, outdated systems, foundation issues. We have seen it all.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-num">02</div>
-          <div>
-            <h4>No Agent, No Commission</h4>
-            <p>Traditional sales cost 5–6% in agent fees alone. Selling directly to us means you keep more of what your home is worth.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-num">03</div>
-          <div>
-            <h4>Flexible Closing Timeline</h4>
-            <p>Need to close in 10 days? Need 60? You decide. We work entirely around your schedule and life circumstances.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-num">04</div>
-          <div>
-            <h4>Local Massachusetts Buyers</h4>
-            <p>We are not a national algorithm. We are local investors who know these neighborhoods and close with real, verified cash.</p>
-          </div>
-        </div>
+        <div class="why-item"><div class="why-num">01</div><div><h4>Sell As-Is — Any Condition</h4><p>Do not spend a dollar fixing your home. We purchase properties in any condition — fire damage, outdated systems, foundation issues. We have seen it all.</p></div></div>
+        <div class="why-item"><div class="why-num">02</div><div><h4>No Agent, No Commission</h4><p>Traditional sales cost 5–6% in agent fees alone. Selling directly to us means you keep more of what your home is worth.</p></div></div>
+        <div class="why-item"><div class="why-num">03</div><div><h4>Flexible Closing Timeline</h4><p>Need to close in 10 days? Need 60? You decide. We work entirely around your schedule and life circumstances.</p></div></div>
+        <div class="why-item"><div class="why-num">04</div><div><h4>Local Massachusetts Buyers</h4><p>We are not a national algorithm. We are local investors who know these neighborhoods and close with real, verified cash.</p></div></div>
       </div>
     </div>
     <div class="vs-card">
       <div class="vs-title">Purple Forge Capital vs. Traditional Sale</div>
       <table class="vs-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Purple Forge</th>
-            <th>Traditional Sale</th>
-          </tr>
-        </thead>
+        <thead><tr><th></th><th>Purple Forge</th><th>Traditional Sale</th></tr></thead>
         <tbody>
           <tr><td>Closing Time</td><td>Your Timeline</td><td>60–90 Days</td></tr>
           <tr><td>Agent Commissions</td><td>$0</td><td>5–6%</td></tr>
@@ -556,7 +458,7 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How is this different from listing with an agent?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>When you list with an agent, you typically wait several months for the right buyer, pay 5–6% in commission, make requested repairs, host repeated showings, and risk the deal falling through at the last minute. With Purple Forge Capital, you receive a guaranteed cash offer, pay zero fees, skip showings entirely, and close on your schedule.</p></div>
+      <div class="faq-answer"><p>When you list with an agent, you typically wait several months for the right buyer, pay 5–6% in commission, make requested repairs, host repeated showings, and risk the deal falling through. With Purple Forge Capital, you receive a guaranteed cash offer, pay zero fees, skip showings entirely, and close on your schedule.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How quickly can you close?<span class="faq-icon">+</span></button>
@@ -589,7 +491,10 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     </svg>
     <div>
       <div class="footer-logo-name">Purple Forge <span>Capital</span></div>
-      <div class="footer-address">Boston, MA &mdash; Serving All of Massachusetts</div>
+      <div class="footer-address">
+        500 Grossman Dr #1048<br/>
+        Braintree, MA 02184
+      </div>
       <div class="footer-copy">&copy; 2025 Purple Forge Capital &middot; Massachusetts Real Estate</div>
       <div class="footer-links">
         <a href="tel:5083776864">(508) 377-6864</a>
@@ -601,90 +506,74 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 </footer>
 
 <script>
-var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxe6MY6IZbtUGW8SekIoufWFORPFXKoyZ6gU69jquvRizshFBv_zLLZ2CZ_w9zHuSyhZQ/exec';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx7uuSVvSCcRMpCo6qZ0E05fZr-vkd_MsMDEhdEgyvIvPTclrN2-SLqmiBemM-WAVd5lw/exec';
 
-function openPopup(){document.getElementById('popupOverlay').classList.add('active');document.body.style.overflow='hidden';}
-function closePopup(){document.getElementById('popupOverlay').classList.remove('active');document.body.style.overflow='';}
-function closeOnOverlay(e){if(e.target===document.getElementById('popupOverlay'))closePopup();}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+function openPopup(){
+  document.getElementById('popupOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closePopup(){
+  document.getElementById('popupOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function closeOnOverlay(e){
+  if(e.target === document.getElementById('popupOverlay')) closePopup();
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closePopup();
+});
 
-function submitForm(){
-  var msgEl    = document.getElementById('formMessage');
-  var btn      = document.querySelector('.submit-btn');
-  var firstName= document.getElementById('firstName').value.trim();
-  var lastName = document.getElementById('lastName').value.trim();
-  var address  = document.getElementById('address').value.trim();
-  var city     = document.getElementById('city').value.trim();
-  var state    = document.getElementById('state').value.trim();
-  var phone    = document.getElementById('phone').value.trim();
-  var email    = document.getElementById('email').value.trim();
-  var reason   = document.getElementById('reason').value;
-  var condition= document.getElementById('condition').value;
+function submitForm(e){
+  e.preventDefault();
+  var msgEl  = document.getElementById('formMessage');
+  var btn    = document.getElementById('submitBtn');
 
-  if(!firstName||!lastName||!address||!city||!state||!phone||!email){
-    msgEl.className='form-msg error';
-    msgEl.textContent='Please complete all required fields before submitting.';
-    return;
-  }
-
-  btn.disabled=true;
-  btn.textContent='Submitting...';
-  msgEl.className='form-msg';
-  msgEl.textContent='';
-
-  var iframeName='hidden_iframe_'+Date.now();
-  var iframe=document.createElement('iframe');
-  iframe.name=iframeName;
-  iframe.style.display='none';
-  document.body.appendChild(iframe);
-
-  var hiddenForm=document.createElement('form');
-  hiddenForm.method='POST';
-  hiddenForm.action=GOOGLE_SCRIPT_URL;
-  hiddenForm.target=iframeName;
-
-  var fields={
-    timestamp: new Date().toLocaleString('en-US',{timeZone:'America/New_York'}),
-    firstName: firstName,
-    lastName:  lastName,
-    address:   address,
-    city:      city,
-    state:     state,
-    phone:     phone,
-    email:     email,
-    reason:    reason,
-    condition: condition
+  var data = {
+    timestamp: new Date().toLocaleString('en-US', {timeZone:'America/New_York'}),
+    firstName: document.getElementById('firstName').value.trim(),
+    lastName:  document.getElementById('lastName').value.trim(),
+    address:   document.getElementById('address').value.trim(),
+    city:      document.getElementById('city').value.trim(),
+    state:     document.getElementById('state').value.trim(),
+    phone:     document.getElementById('phone').value.trim(),
+    email:     document.getElementById('email').value.trim(),
+    reason:    document.getElementById('reason').value,
+    condition: document.getElementById('condition').value
   };
 
-  Object.keys(fields).forEach(function(key){
-    var input=document.createElement('input');
-    input.type='hidden';
-    input.name=key;
-    input.value=fields[key];
-    hiddenForm.appendChild(input);
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  msgEl.className = 'form-msg';
+  msgEl.textContent = '';
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  })
+  .then(function(){
+    msgEl.className = 'form-msg success';
+    msgEl.textContent = 'Thank you! We will be in touch within 24 hours with your cash offer.';
+    btn.disabled = false;
+    btn.textContent = 'Get My Free Cash Offer \u2192';
+    document.getElementById('leadForm').reset();
+  })
+  .catch(function(){
+    msgEl.className = 'form-msg success';
+    msgEl.textContent = 'Thank you! We will be in touch within 24 hours with your cash offer.';
+    btn.disabled = false;
+    btn.textContent = 'Get My Free Cash Offer \u2192';
+    document.getElementById('leadForm').reset();
   });
-
-  document.body.appendChild(hiddenForm);
-  hiddenForm.submit();
-
-  setTimeout(function(){
-    msgEl.className='form-msg success';
-    msgEl.textContent='Thank you. We will be in touch within 24 hours with your cash offer.';
-    btn.disabled=false;
-    btn.textContent='Get My Free Cash Offer \u2192';
-    ['firstName','lastName','address','city','state','phone','email','reason','condition'].forEach(function(id){
-      document.getElementById(id).value='';
-    });
-    try{document.body.removeChild(hiddenForm);document.body.removeChild(iframe);}catch(e){}
-  },2500);
 }
 
 function toggleFaq(btn){
-  var answer=btn.nextElementSibling;
-  var isOpen=answer.classList.contains('open');
-  document.querySelectorAll('.faq-answer').forEach(function(a){a.classList.remove('open');});
-  document.querySelectorAll('.faq-question').forEach(function(b){b.classList.remove('active');});
-  if(!isOpen){answer.classList.add('open');btn.classList.add('active');}
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(function(a){ a.classList.remove('open'); });
+  document.querySelectorAll('.faq-question').forEach(function(b){ b.classList.remove('active'); });
+  if(!isOpen){ answer.classList.add('open'); btn.classList.add('active'); }
 }
 </script>
 </body>
