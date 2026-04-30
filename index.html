@@ -26,7 +26,6 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
-
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
 .logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
@@ -40,7 +39,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--ink);}
 .nav-cta{background:var(--navy);color:var(--white);padding:0.6rem 1.5rem;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;transition:background 0.2s;}
 .nav-cta:hover{background:var(--navy2);}
-
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding-top:72px;}
 .hero-left{background:var(--off);padding:4rem 3.5rem 4rem 3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule2);position:relative;}
@@ -57,7 +55,6 @@ h1 span{color:var(--gold);}
 .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--rule2);flex-wrap:wrap;}
 .hero-stats .stat-n{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--navy);line-height:1;}
 .hero-stats .stat-l{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--light-txt);margin-top:4px;}
-
 /* RIGHT PANEL */
 .panel-headline{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);margin-bottom:0.35rem;line-height:1.2;}
 .panel-sub{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1.75rem;font-weight:300;}
@@ -71,11 +68,9 @@ h1 span{color:var(--gold);}
 .panel-contact a{color:rgba(255,255,255,0.6);font-size:0.82rem;text-decoration:none;font-weight:300;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem;}
 .panel-contact a:hover{color:var(--white);}
 .panel-contact a span{color:var(--gold-lt);}
-
 /* FLOATING CTA */
 .floating-cta{position:fixed;bottom:2rem;right:2rem;z-index:300;background:var(--navy);color:var(--white);padding:0.85rem 1.6rem;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;box-shadow:0 4px 20px rgba(30,43,58,0.25);transition:background 0.2s,transform 0.2s;border-left:3px solid var(--gold);}
 .floating-cta:hover{background:var(--navy2);transform:translateY(-2px);}
-
 /* POPUP */
 .popup-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(28,27,24,0.55);align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(4px);}
 .popup-overlay.active{display:flex;}
@@ -103,12 +98,20 @@ h1 span{color:var(--gold);}
 .form-msg.success{display:block;background:#f0faf5;border:1px solid #a7d7ba;color:#1a5c38;}
 .form-msg.error{display:block;background:#fdf2f2;border:1px solid #e4a5a5;color:#7a1f1f;}
 
+/* ── CONSENT BLOCK ── */
+.consent-block{background:var(--off);border:1px solid var(--rule2);border-left:2px solid var(--gold);padding:1rem 1.1rem;border-radius:2px;}
+.consent-check-row{display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.7rem;}
+.consent-check-row input[type="checkbox"]{width:14px;height:14px;min-width:14px;margin-top:3px;accent-color:var(--navy);cursor:pointer;flex-shrink:0;}
+.consent-check-label{font-size:0.78rem;color:var(--ink2);line-height:1.55;font-weight:500;}
+.consent-check-label a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+.consent-check-label a:hover{color:var(--gold2);}
+.consent-legal-text{font-size:0.7rem;color:var(--muted);line-height:1.7;font-weight:300;}
+
 /* SECTIONS */
 .section-tag{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.85rem;}
 .section-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
 h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:0.04em;line-height:1.05;margin-bottom:0.5rem;color:var(--ink);}
 .section-sub{font-size:0.95rem;font-weight:300;color:var(--muted);line-height:1.7;max-width:540px;margin-top:0.5rem;}
-
 /* PROCESS */
 .process{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;border-top:2px solid var(--ink);}
@@ -117,7 +120,6 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .step-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--cream2);line-height:1;margin-bottom:1rem;}
 .step-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);margin-bottom:0.75rem;}
 .step-desc{font-size:0.83rem;line-height:1.8;color:var(--muted);font-weight:300;}
-
 /* ABOUT */
 .about{background:var(--off);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3.5rem;}
@@ -127,7 +129,6 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .about-card{background:var(--white);border:1px solid var(--rule);border-left:2px solid var(--gold);padding:1.5rem 1.5rem 1.5rem 1.25rem;}
 .about-card h4{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.5rem;}
 .about-card p{font-size:0.82rem;color:var(--muted);line-height:1.7;font-weight:300;}
-
 /* SITUATIONS */
 .situations{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3.5rem;background:var(--rule);}
@@ -137,7 +138,6 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .sit-card:hover .sit-marker{width:44px;}
 .sit-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;}
 .sit-desc{font-size:0.82rem;line-height:1.75;color:var(--muted);font-weight:300;}
-
 /* WHY SELL */
 .why{background:var(--off);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
@@ -157,7 +157,6 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .vs-table td:first-child{color:var(--muted);font-weight:300;}
 .vs-table td:nth-child(2){color:var(--navy);font-weight:600;text-align:center;}
 .vs-table td:last-child{color:var(--cream2);text-decoration:line-through;font-size:0.77rem;text-align:right;}
-
 /* FAQ */
 .faq{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .faq-list{margin-top:3rem;}
@@ -171,14 +170,12 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .faq-answer p{font-size:0.9rem;line-height:1.85;color:var(--muted);font-weight:300;}
 .faq-question.active{color:var(--gold);}
 .faq-question.active .faq-icon{transform:rotate(45deg);}
-
 /* BOTTOM CTA */
 .bottom-cta{background:var(--navy);padding:4rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:2px solid var(--gold);}
 .bcta-text h2{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:0.04em;color:var(--white);line-height:1.05;}
 .bcta-text p{color:rgba(255,255,255,0.45);font-size:0.9rem;font-weight:300;margin-top:0.4rem;}
 .bcta-btn{background:var(--gold);color:var(--white);padding:1rem 2.5rem;font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;white-space:nowrap;transition:background 0.2s;}
 .bcta-btn:hover{background:var(--gold2);}
-
 /* FOOTER */
 footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
 .footer-brand{display:flex;align-items:flex-start;gap:1rem;}
@@ -190,7 +187,6 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 .footer-links a{color:rgba(255,255,255,0.45);font-size:0.78rem;text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold-lt);}
 .footer-disclaimer{font-size:0.65rem;color:rgba(255,255,255,0.18);max-width:460px;line-height:1.7;margin-top:0.75rem;}
-
 /* RESPONSIVE */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;}
@@ -257,7 +253,6 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
       <div><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
     </div>
   </div>
-
   <div class="hero-right-panel">
     <div class="panel-headline">Get Your Free<br/>Cash Offer Today</div>
     <div class="panel-sub">No obligation &nbsp;&middot;&nbsp; Within 24 hours &nbsp;&middot;&nbsp; 100% confidential</div>
@@ -325,6 +320,18 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
             <option value="Distressed / damaged">Distressed / damaged</option>
           </select>
         </div>
+
+        <!-- ── CONSENT BLOCK (added) ── -->
+        <div class="consent-block">
+          <div class="consent-check-row">
+            <input type="checkbox" id="consentCheck" name="consent" required/>
+            <label class="consent-check-label" for="consentCheck">
+              I agree to the <a href="https://www.maxhousebuyer.com/terms-of-use/" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="https://www.maxhousebuyer.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy.</a>
+            </label>
+          </div>
+          <p class="consent-legal-text">By submitting this form, you agree to receive Marketing Messages updates about property offers and related services and/or calls and/or emails from Max House Buyer. Message frequency varies. Reply STOP to unsubscribe. Msg &amp; data rates may apply for SMS. Your information is secure and will not be sold to third parties. Text HELP for HELP. text STOP to cancel.</p>
+        </div>
+
         <button class="submit-btn" type="submit" id="submitBtn">Get My Free Cash Offer &rarr;</button>
         <div id="formMessage" class="form-msg"></div>
         <div class="form-trust">Your information is private and never shared with third parties.</div>
@@ -527,7 +534,6 @@ function submitForm(e){
   e.preventDefault();
   var msgEl  = document.getElementById('formMessage');
   var btn    = document.getElementById('submitBtn');
-
   var data = {
     timestamp: new Date().toLocaleString('en-US', {timeZone:'America/New_York'}),
     firstName: document.getElementById('firstName').value.trim(),
@@ -540,12 +546,10 @@ function submitForm(e){
     reason:    document.getElementById('reason').value,
     condition: document.getElementById('condition').value
   };
-
   btn.disabled = true;
   btn.textContent = 'Submitting...';
   msgEl.className = 'form-msg';
   msgEl.textContent = '';
-
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
