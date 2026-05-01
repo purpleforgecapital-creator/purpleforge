@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — Purple Forge Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff;--off:#F8F7F5;--ink:#1C1B18;--ink2:#3D3C38;
+  --muted:#6B6A64;--light-txt:#9B9A94;--navy:#1E2B3A;--navy2:#263547;
+  --gold:#9A7B3F;--gold2:#B8953F;--gold-lt:#D4AE6A;
+  --rule:rgba(28,27,24,0.10);--rule2:rgba(28,27,24,0.16);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);line-height:1.7;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
+.logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
+.logo-hex{width:40px;height:40px;flex-shrink:0;}
+.logo-mark{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.08em;color:var(--ink);}
+.logo-mark span{color:var(--gold);}
+.logo-sub{font-size:0.52rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+.nav-back{background:var(--navy);color:var(--white);padding:0.55rem 1.3rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;text-decoration:none;transition:background 0.2s;}
+.nav-back:hover{background:var(--navy2);}
+
+/* HERO STRIP */
+.page-hero{background:var(--navy);padding:3.5rem 2.8rem 3rem;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:0;right:0;width:260px;height:100%;background:rgba(255,255,255,0.02);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);}
+.page-tag{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-lt);font-weight:600;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.6rem;}
+.page-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold-lt);}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:0.04em;color:var(--white);line-height:1.05;margin-bottom:0.6rem;}
+.page-meta{font-size:0.8rem;color:rgba(255,255,255,0.45);font-weight:300;}
+
+/* CONTENT */
+.content-wrap{max-width:820px;margin:0 auto;padding:4rem 2.8rem 6rem;}
+.section-block{margin-bottom:2.8rem;}
+.section-block h2{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule2);}
+.section-block p{font-size:0.92rem;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:0.85rem;}
+.section-block p:last-child{margin-bottom:0;}
+.section-block ul{margin:0.5rem 0 0.85rem 1.2rem;}
+.section-block ul li{font-size:0.92rem;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
+.section-block a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+.section-block a:hover{color:var(--gold2);}
+.highlight-box{background:var(--off);border-left:2px solid var(--gold);padding:1.1rem 1.25rem;border-radius:2px;margin-bottom:0.85rem;}
+.highlight-box p{margin-bottom:0;}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;margin:0.75rem 0 0.85rem;}
+.data-table th{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-txt);padding:0.55rem 0.85rem;text-align:left;border-bottom:1px solid var(--rule2);background:var(--off);}
+.data-table td{padding:0.75rem 0.85rem;font-size:0.88rem;color:var(--muted);border-bottom:1px solid var(--rule);font-weight:300;vertical-align:top;}
+.data-table tr:last-child td{border-bottom:none;}
+
+/* FOOTER */
+.page-footer{background:var(--ink);padding:2.5rem 2.8rem;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
+.pf-name{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;color:var(--white);letter-spacing:0.08em;}
+.pf-name span{color:var(--gold-lt);}
+.pf-copy{font-size:0.68rem;color:rgba(255,255,255,0.2);margin-top:0.2rem;}
+.pf-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.pf-links a{font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.pf-links a:hover{color:var(--gold-lt);}
+
+@media(max-width:640px){
+  nav{padding:0 1.25rem;}
+  .page-hero{padding:2.5rem 1.25rem 2rem;}
+  .content-wrap{padding:2.5rem 1.25rem 4rem;}
+  .page-footer{padding:2rem 1.25rem;}
+  .data-table th,.data-table td{padding:0.5rem 0.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
+      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
+      <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#1E2B3A" stroke-width="1" opacity="0.25"/>
+      <text font-family="Georgia,serif" font-size="17" font-weight="700" fill="#1E2B3A" x="40" y="41" text-anchor="middle" dominant-baseline="central" letter-spacing="1">PFC</text>
+    </svg>
+    <div>
+      <div class="logo-mark">Purple Forge <span>Capital</span></div>
+      <div class="logo-sub">Massachusetts Real Estate</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="page-meta">Effective Date: January 1, 2025 &nbsp;&middot;&nbsp; Last Updated: January 1, 2025</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="section-block">
+    <div class="highlight-box">
+      <p>Purple Forge Capital is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information. By using our Site or submitting your information, you agree to the practices described in this policy.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>1. Who We Are</h2>
+    <p>Purple Forge Capital ("we," "us," or "our") is a real estate investment company located at 500 Grossman Dr #1048, Braintree, MA 02184. We operate the website purpleforgecapital.com (the "Site") and contact homeowners in Massachusetts who may be interested in selling their property for cash.</p>
+    <p>For questions about this Privacy Policy, you may contact us at:<br/>
+    <strong>Email:</strong> <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a><br/>
+    <strong>Phone:</strong> <a href="tel:5083776864">(508) 377-6864</a></p>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Information We Collect</h2>
+    <p>We collect information you voluntarily provide when you submit a form on our Site. This may include:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Contact Information</td><td>First name, last name, phone number, email address</td><td>To contact you about your property inquiry</td></tr>
+        <tr><td>Property Information</td><td>Street address, city, state, property condition, reason for selling</td><td>To evaluate and make a cash offer on your property</td></tr>
+        <tr><td>Usage Data</td><td>IP address, browser type, pages visited, time on site</td><td>To improve Site performance and user experience</td></tr>
+      </tbody>
+    </table>
+    <p>We do not collect sensitive personal information such as Social Security numbers, financial account details, or government-issued ID numbers through this Site.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>To respond to your property inquiry and make a cash offer</li>
+      <li>To contact you by phone, email, or SMS regarding your inquiry and related property services</li>
+      <li>To send you marketing messages about property offers and real estate investment opportunities from Purple Forge Capital</li>
+      <li>To improve our Site, services, and communications</li>
+      <li>To comply with legal obligations and enforce our Terms of Use</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>4. SMS / Text Message Communications</h2>
+    <p>By submitting a form on our Site and checking the marketing consent checkbox, you expressly consent to receive SMS text messages from Purple Forge Capital at the phone number you provided. These messages may include updates about property offers, follow-up communications, and related real estate services.</p>
+    <ul>
+      <li><strong>Message frequency:</strong> Varies based on your inquiry and our follow-up schedule</li>
+      <li><strong>Msg &amp; data rates may apply</strong> depending on your mobile carrier and plan</li>
+      <li><strong>To opt out:</strong> Reply STOP to any text message at any time to cancel</li>
+      <li><strong>For help:</strong> Reply HELP or contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+    </ul>
+    <p>We will never use SMS to send unsolicited spam. You can always withdraw your consent by replying STOP.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>5. How We Share Your Information</h2>
+    <p>Your personal information is secure and will <strong>never be sold to third parties.</strong> We may share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> Trusted vendors who assist us in operating our website or conducting our business (e.g., form processing, email delivery) — subject to strict confidentiality obligations</li>
+      <li><strong>Legal compliance:</strong> When required by law, court order, or government authority</li>
+      <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of our business assets, your information may be transferred as part of that transaction</li>
+      <li><strong>Protection of rights:</strong> To protect the rights, property, or safety of Purple Forge Capital, our clients, or others</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>6. Cookies and Tracking Technologies</h2>
+    <p>Our Site may use cookies and similar tracking technologies to enhance your browsing experience and analyze Site traffic. Cookies are small data files stored on your device. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some portions of the Site may not function properly.</p>
+    <p>We may also use analytics tools (such as Google Analytics) to understand how visitors interact with our Site. These tools may collect information such as your IP address, browser type, and pages visited. This data is aggregated and does not identify you personally.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Data Retention</h2>
+    <p>We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, including responding to your property inquiry, maintaining our business records, and complying with legal obligations. When your information is no longer needed, we will securely delete or anonymize it.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>8. Data Security</h2>
+    <p>We implement reasonable technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>9. Your Rights and Choices</h2>
+    <p>Depending on your location and applicable law, you may have the following rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+      <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>
+      <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain legal exceptions</li>
+      <li><strong>Opt-out of marketing:</strong> Unsubscribe from email communications at any time by contacting us, or reply STOP to opt out of SMS messages</li>
+      <li><strong>Withdraw consent:</strong> Where processing is based on your consent, you may withdraw it at any time without affecting the lawfulness of prior processing</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a> or call <a href="tel:5083776864">(508) 377-6864</a>. We will respond within a reasonable timeframe.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>10. Children's Privacy</h2>
+    <p>Our Site is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately and we will take steps to delete that information.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>11. Third-Party Links</h2>
+    <p>Our Site may contain links to third-party websites. This Privacy Policy does not apply to those sites, and we are not responsible for their privacy practices. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make changes, we will update the "Last Updated" date at the top of this page. Your continued use of the Site after any changes constitutes your acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>13. Governing Law</h2>
+    <p>This Privacy Policy is governed by the laws of the Commonwealth of Massachusetts. Any disputes arising from this policy shall be resolved in the state or federal courts of Norfolk County, Massachusetts.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>14. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:</p>
+    <ul>
+      <li><strong>Purple Forge Capital</strong></li>
+      <li>500 Grossman Dr #1048, Braintree, MA 02184</li>
+      <li>Phone: <a href="tel:5083776864">(508) 377-6864</a></li>
+      <li>Email: <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <div>
+    <div class="pf-name">Purple Forge <span>Capital</span></div>
+    <div class="pf-copy">&copy; 2025 Purple Forge Capital &middot; Massachusetts Real Estate</div>
+  </div>
+  <div class="pf-links">
+    <a href="index.html">Home</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="tel:5083776864">(508) 377-6864</a>
+    <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
