@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Use — Purple Forge Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff;--off:#F8F7F5;--ink:#1C1B18;--ink2:#3D3C38;
+  --muted:#6B6A64;--light-txt:#9B9A94;--navy:#1E2B3A;--navy2:#263547;
+  --gold:#9A7B3F;--gold2:#B8953F;--gold-lt:#D4AE6A;
+  --rule:rgba(28,27,24,0.10);--rule2:rgba(28,27,24,0.16);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);line-height:1.7;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
+.logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
+.logo-hex{width:40px;height:40px;flex-shrink:0;}
+.logo-mark{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.08em;color:var(--ink);}
+.logo-mark span{color:var(--gold);}
+.logo-sub{font-size:0.52rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+.nav-back{background:var(--navy);color:var(--white);padding:0.55rem 1.3rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;text-decoration:none;transition:background 0.2s;}
+.nav-back:hover{background:var(--navy2);}
+
+/* HERO STRIP */
+.page-hero{background:var(--navy);padding:3.5rem 2.8rem 3rem;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:0;right:0;width:260px;height:100%;background:rgba(255,255,255,0.02);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);}
+.page-tag{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-lt);font-weight:600;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.6rem;}
+.page-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold-lt);}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:0.04em;color:var(--white);line-height:1.05;margin-bottom:0.6rem;}
+.page-meta{font-size:0.8rem;color:rgba(255,255,255,0.45);font-weight:300;}
+
+/* CONTENT */
+.content-wrap{max-width:820px;margin:0 auto;padding:4rem 2.8rem 6rem;}
+.section-block{margin-bottom:2.8rem;}
+.section-block h2{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule2);}
+.section-block p{font-size:0.92rem;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:0.85rem;}
+.section-block p:last-child{margin-bottom:0;}
+.section-block ul{margin:0.5rem 0 0.85rem 1.2rem;}
+.section-block ul li{font-size:0.92rem;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
+.section-block a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+.section-block a:hover{color:var(--gold2);}
+.highlight-box{background:var(--off);border-left:2px solid var(--gold);padding:1.1rem 1.25rem;border-radius:2px;margin-bottom:0.85rem;}
+.highlight-box p{margin-bottom:0;}
+
+/* FOOTER */
+.page-footer{background:var(--ink);padding:2.5rem 2.8rem;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
+.pf-name{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;color:var(--white);letter-spacing:0.08em;}
+.pf-name span{color:var(--gold-lt);}
+.pf-copy{font-size:0.68rem;color:rgba(255,255,255,0.2);margin-top:0.2rem;}
+.pf-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.pf-links a{font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.pf-links a:hover{color:var(--gold-lt);}
+
+@media(max-width:640px){
+  nav{padding:0 1.25rem;}
+  .page-hero{padding:2.5rem 1.25rem 2rem;}
+  .content-wrap{padding:2.5rem 1.25rem 4rem;}
+  .page-footer{padding:2rem 1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
+      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
+      <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#1E2B3A" stroke-width="1" opacity="0.25"/>
+      <text font-family="Georgia,serif" font-size="17" font-weight="700" fill="#1E2B3A" x="40" y="41" text-anchor="middle" dominant-baseline="central" letter-spacing="1">PFC</text>
+    </svg>
+    <div>
+      <div class="logo-mark">Purple Forge <span>Capital</span></div>
+      <div class="logo-sub">Massachusetts Real Estate</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Legal</div>
+  <h1>Terms of Use</h1>
+  <p class="page-meta">Effective Date: January 1, 2025 &nbsp;&middot;&nbsp; Last Updated: January 1, 2025</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="section-block">
+    <div class="highlight-box">
+      <p>Please read these Terms of Use carefully before using the Purple Forge Capital website or submitting any information through our forms. By accessing this site, you agree to be bound by these terms.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using the website located at purpleforgecapital.com (the "Site"), you agree to be bound by these Terms of Use ("Terms"). These Terms apply to all visitors, users, and anyone who accesses or uses the Site. If you disagree with any part of these Terms, you may not access the Site.</p>
+    <p>Purple Forge Capital ("we," "us," or "our") reserves the right to update or modify these Terms at any time without prior notice. Your continued use of the Site following any changes constitutes your acceptance of those changes.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Who We Are</h2>
+    <p>Purple Forge Capital is a real estate investment company based in Braintree, Massachusetts. We are not licensed real estate agents or brokers. All property purchases are made directly as principals and are not brokered through a licensed real estate agency. Our offers are subject to property inspection and standard due diligence.</p>
+    <p>Mailing Address: 500 Grossman Dr #1048, Braintree, MA 02184<br/>
+    Phone: (508) 377-6864<br/>
+    Email: purpleforgecapital@gmail.com</p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Use of the Site</h2>
+    <p>You agree to use this Site only for lawful purposes and in a manner that does not infringe the rights of others. You may not:</p>
+    <ul>
+      <li>Use the Site in any way that violates applicable federal, state, or local law or regulation</li>
+      <li>Submit false, misleading, or fraudulent information through any form on the Site</li>
+      <li>Attempt to gain unauthorized access to any portion of the Site or its related systems</li>
+      <li>Transmit any unsolicited commercial communications or spam</li>
+      <li>Reproduce, duplicate, copy, sell, or exploit any part of the Site without our express written permission</li>
+      <li>Use the Site in any manner that could disable, overburden, or impair the Site's functionality</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>4. No Real Estate Brokerage Services</h2>
+    <p>The information on this Site is for general informational purposes only and does not constitute real estate, legal, tax, or financial advice. Purple Forge Capital is not a licensed real estate broker or agent. Nothing on this Site should be construed as a solicitation for services that require a real estate license under Massachusetts law.</p>
+    <p>All cash offers made by Purple Forge Capital are made in our capacity as a direct buyer, not as a representative, agent, or broker for any third party.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Form Submissions and Communications</h2>
+    <p>When you submit a form on this Site, you are requesting that Purple Forge Capital contact you regarding a potential cash offer for your property. By submitting your information, you expressly consent to being contacted by Purple Forge Capital via phone, email, or SMS text message regarding your inquiry.</p>
+    <p>Message frequency will vary based on your inquiry. Standard message and data rates may apply to SMS communications. You may opt out of SMS communications at any time by replying STOP. Reply HELP for assistance.</p>
+    <p>We will never sell your personal information to third parties. Please review our <a href="privacy-policy.html">Privacy Policy</a> for full details on how your information is used.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>6. No Obligation</h2>
+    <p>Submitting your information through this Site does not obligate you to sell your property to Purple Forge Capital, nor does it obligate Purple Forge Capital to make an offer. Any offer made is contingent upon property inspection and due diligence at our sole discretion.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Intellectual Property</h2>
+    <p>All content on this Site, including but not limited to text, graphics, logos, images, and software, is the property of Purple Forge Capital and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on this Site without our express written permission.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>8. Third-Party Links</h2>
+    <p>This Site may contain links to third-party websites. These links are provided for convenience only. Purple Forge Capital has no control over the content of those sites and accepts no responsibility for them or for any loss or damage that may arise from your use of them. Visiting any third-party site is at your own risk.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>9. Disclaimer of Warranties</h2>
+    <p>This Site and all content, products, and services provided through it are offered on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+    <p>Purple Forge Capital does not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or usefulness of any information on the Site.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>10. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Purple Forge Capital, its members, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, this Site or any content or services provided through it — even if we have been advised of the possibility of such damages.</p>
+    <p>Our total liability to you for any claim arising from these Terms or your use of the Site shall not exceed one hundred dollars ($100.00).</p>
+  </div>
+
+  <div class="section-block">
+    <h2>11. Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless Purple Forge Capital and its members, officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with your access to or use of the Site, your violation of these Terms, or your violation of any rights of another person or entity.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>12. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the Commonwealth of Massachusetts, without regard to its conflict of law provisions. Any legal action or proceeding arising under these Terms shall be brought exclusively in the state or federal courts located in Norfolk County, Massachusetts.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>13. Severability</h2>
+    <p>If any provision of these Terms is found to be unenforceable or invalid under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>14. Entire Agreement</h2>
+    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and Purple Forge Capital with respect to your use of the Site and supersede all prior agreements, representations, and understandings.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>15. Contact Us</h2>
+    <p>If you have any questions about these Terms of Use, please contact us:</p>
+    <ul>
+      <li><strong>Purple Forge Capital</strong></li>
+      <li>500 Grossman Dr #1048, Braintree, MA 02184</li>
+      <li>Phone: <a href="tel:5083776864">(508) 377-6864</a></li>
+      <li>Email: <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <div>
+    <div class="pf-name">Purple Forge <span>Capital</span></div>
+    <div class="pf-copy">&copy; 2025 Purple Forge Capital &middot; Massachusetts Real Estate</div>
+  </div>
+  <div class="pf-links">
+    <a href="index.html">Home</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="tel:5083776864">(508) 377-6864</a>
+    <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
