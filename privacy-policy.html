@@ -8,66 +8,94 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --white:#ffffff;--off:#F8F7F5;--ink:#1C1B18;--ink2:#3D3C38;
-  --muted:#6B6A64;--light-txt:#9B9A94;--navy:#1E2B3A;--navy2:#263547;
-  --gold:#9A7B3F;--gold2:#B8953F;--gold-lt:#D4AE6A;
+  --white:#ffffff;--off:#F8F7F5;--cream:#F1EFE8;--cream2:#E8E6DC;
+  --ink:#1C1B18;--ink2:#3D3C38;--muted:#6B6A64;--light-txt:#9B9A94;
+  --navy:#1E2B3A;--navy2:#263547;--gold:#9A7B3F;--gold2:#B8953F;--gold-lt:#D4AE6A;
   --rule:rgba(28,27,24,0.10);--rule2:rgba(28,27,24,0.16);
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);line-height:1.7;}
+body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+*:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
+nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
 .logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
-.logo-hex{width:40px;height:40px;flex-shrink:0;}
-.logo-mark{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.08em;color:var(--ink);}
+.logo-hex{width:46px;height:46px;flex-shrink:0;}
+.logo-text{line-height:1.2;}
+.logo-mark{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:0.08em;color:var(--ink);}
 .logo-mark span{color:var(--gold);}
-.logo-sub{font-size:0.52rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--muted);font-weight:400;}
-.nav-back{background:var(--navy);color:var(--white);padding:0.55rem 1.3rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;text-decoration:none;transition:background 0.2s;}
-.nav-back:hover{background:var(--navy2);}
+.logo-sub{font-size:0.55rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+.back-link{font-size:0.78rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;transition:color 0.2s;}
+.back-link:hover{color:var(--gold);}
 
-/* HERO STRIP */
-.page-hero{background:var(--navy);padding:3.5rem 2.8rem 3rem;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;top:0;right:0;width:260px;height:100%;background:rgba(255,255,255,0.02);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);}
-.page-tag{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-lt);font-weight:600;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.6rem;}
-.page-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold-lt);}
-.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:0.04em;color:var(--white);line-height:1.05;margin-bottom:0.6rem;}
-.page-meta{font-size:0.8rem;color:rgba(255,255,255,0.45);font-weight:300;}
+/* HEADER */
+.page-header{background:var(--off);padding:4.5rem 3rem 3.5rem;border-bottom:1px solid var(--rule2);position:relative;}
+.page-header::after{content:'';position:absolute;top:4.5rem;left:3rem;width:40px;height:3px;background:var(--gold);}
+.header-inner{max-width:820px;margin:0 auto;padding-top:1.25rem;}
+.eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.85rem;}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,4.5vw,3.8rem);letter-spacing:0.03em;line-height:1.02;color:var(--ink);margin-bottom:0.85rem;}
+.meta{font-size:0.78rem;color:var(--muted);letter-spacing:0.05em;font-weight:400;}
 
 /* CONTENT */
-.content-wrap{max-width:820px;margin:0 auto;padding:4rem 2.8rem 6rem;}
-.section-block{margin-bottom:2.8rem;}
-.section-block h2{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.9rem;padding-bottom:0.6rem;border-bottom:1px solid var(--rule2);}
-.section-block p{font-size:0.92rem;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:0.85rem;}
-.section-block p:last-child{margin-bottom:0;}
-.section-block ul{margin:0.5rem 0 0.85rem 1.2rem;}
-.section-block ul li{font-size:0.92rem;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:0.3rem;}
-.section-block a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
-.section-block a:hover{color:var(--gold2);}
-.highlight-box{background:var(--off);border-left:2px solid var(--gold);padding:1.1rem 1.25rem;border-radius:2px;margin-bottom:0.85rem;}
-.highlight-box p{margin-bottom:0;}
+main{padding:3.5rem 3rem 5rem;background:var(--white);}
+.content{max-width:820px;margin:0 auto;}
+.lede{font-size:1rem;line-height:1.85;color:var(--ink2);font-weight:400;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--rule);}
+
+/* TOC */
+.toc{background:var(--cream);border-left:2px solid var(--gold);padding:1.5rem 1.75rem;margin-bottom:2.5rem;}
+.toc h3{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);margin-bottom:0.85rem;display:flex;align-items:center;gap:0.6rem;}
+.toc h3::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+.toc ol{list-style:none;counter-reset:toc;padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 1.25rem;}
+.toc ol li{counter-increment:toc;font-size:0.82rem;line-height:1.6;color:var(--ink2);}
+.toc ol li::before{content:counter(toc,decimal-leading-zero) ".";color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.05em;margin-right:0.5rem;}
+.toc ol li a{color:var(--ink2);text-decoration:none;transition:color 0.2s;}
+.toc ol li a:hover{color:var(--gold);}
+@media(max-width:640px){.toc ol{grid-template-columns:1fr;}}
+
+h2{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);margin:2.75rem 0 1rem;line-height:1.2;display:flex;align-items:baseline;gap:0.85rem;scroll-margin-top:90px;}
+h2 .num{color:var(--gold);font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.04em;flex-shrink:0;}
+h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin:1.6rem 0 0.6rem;}
+p{font-size:0.92rem;line-height:1.85;color:var(--ink2);font-weight:400;margin-bottom:1rem;}
+p:last-child{margin-bottom:0;}
+ul{padding-left:1.4rem;margin-bottom:1rem;}
+li{font-size:0.92rem;line-height:1.8;color:var(--ink2);margin-bottom:0.4rem;}
+li::marker{color:var(--gold);}
+strong{color:var(--ink);font-weight:600;}
+a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+a:hover{color:var(--gold2);}
 
 /* TABLE */
-.data-table{width:100%;border-collapse:collapse;margin:0.75rem 0 0.85rem;}
-.data-table th{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-txt);padding:0.55rem 0.85rem;text-align:left;border-bottom:1px solid var(--rule2);background:var(--off);}
-.data-table td{padding:0.75rem 0.85rem;font-size:0.88rem;color:var(--muted);border-bottom:1px solid var(--rule);font-weight:300;vertical-align:top;}
+.data-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;background:var(--white);border:1px solid var(--rule2);}
+.data-table th{background:var(--off);font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);padding:0.85rem 1rem;text-align:left;border-bottom:1px solid var(--rule2);vertical-align:top;}
+.data-table td{padding:0.85rem 1rem;font-size:0.85rem;line-height:1.65;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;}
 .data-table tr:last-child td{border-bottom:none;}
 
-/* FOOTER */
-.page-footer{background:var(--ink);padding:2.5rem 2.8rem;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
-.pf-name{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;color:var(--white);letter-spacing:0.08em;}
-.pf-name span{color:var(--gold-lt);}
-.pf-copy{font-size:0.68rem;color:rgba(255,255,255,0.2);margin-top:0.2rem;}
-.pf-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-.pf-links a{font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
-.pf-links a:hover{color:var(--gold-lt);}
+.callout{background:var(--off);border:1px solid var(--rule2);border-left:2px solid var(--gold);padding:1.5rem 1.75rem;margin:1.25rem 0 1.5rem;}
+.callout-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.callout-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+.callout p, .callout li{font-size:0.85rem;color:var(--ink2);line-height:1.75;}
 
-@media(max-width:640px){
-  nav{padding:0 1.25rem;}
-  .page-hero{padding:2.5rem 1.25rem 2rem;}
-  .content-wrap{padding:2.5rem 1.25rem 4rem;}
-  .page-footer{padding:2rem 1.25rem;}
-  .data-table th,.data-table td{padding:0.5rem 0.5rem;}
+.contact-card{background:var(--cream);border-left:2px solid var(--gold);padding:1.5rem 1.75rem;margin-top:1rem;}
+.contact-card h4{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;}
+.contact-card p, .contact-card li{font-size:0.85rem;line-height:1.7;color:var(--ink2);}
+.contact-card ul{padding-left:0;list-style:none;}
+.contact-card li{margin-bottom:0.3rem;}
+
+/* FOOTER */
+footer{background:var(--ink);padding:2.5rem 3rem;border-top:1px solid rgba(255,255,255,0.06);}
+.footer-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:1140px;margin:0 auto;font-size:0.75rem;color:rgba(255,255,255,0.35);letter-spacing:0.05em;}
+.footer-row a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.footer-row a:hover{color:var(--gold-lt);}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+
+@media(max-width:760px){
+  nav{padding:0 1.5rem;height:64px;}
+  .page-header{padding:3rem 1.5rem 2.5rem;}
+  .page-header::after{left:1.5rem;top:3rem;}
+  main{padding:2.5rem 1.5rem 3.5rem;}
+  footer{padding:2rem 1.5rem;}
+  h2{font-size:1.15rem;}
 }
 </style>
 </head>
@@ -75,166 +103,212 @@ nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-co
 
 <nav>
   <a href="index.html" class="logo-wrap">
-    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
       <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
       <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#1E2B3A" stroke-width="1" opacity="0.25"/>
       <text font-family="Georgia,serif" font-size="17" font-weight="700" fill="#1E2B3A" x="40" y="41" text-anchor="middle" dominant-baseline="central" letter-spacing="1">PFC</text>
     </svg>
-    <div>
+    <div class="logo-text">
       <div class="logo-mark">Purple Forge <span>Capital</span></div>
       <div class="logo-sub">Massachusetts Real Estate</div>
     </div>
   </a>
-  <a href="index.html" class="nav-back">&#8592; Back to Home</a>
+  <a href="index.html" class="back-link">← Back to Home</a>
 </nav>
 
-<div class="page-hero">
-  <div class="page-tag">Legal</div>
-  <h1>Privacy Policy</h1>
-  <p class="page-meta">Effective Date: January 1, 2025 &nbsp;&middot;&nbsp; Last Updated: January 1, 2025</p>
-</div>
+<header class="page-header">
+  <div class="header-inner">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective Date: January 1, 2026 &nbsp;&middot;&nbsp; Last Updated: June 10, 2026</div>
+  </div>
+</header>
 
-<div class="content-wrap">
+<main>
+  <div class="content">
 
-  <div class="section-block">
-    <div class="highlight-box">
-      <p>Purple Forge Capital is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information. By using our Site or submitting your information, you agree to the practices described in this policy.</p>
+    <p class="lede">Purple Forge Capital LLC ("Purple Forge Capital," "we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect, how we use it, who we share it with, and the choices and rights you have. It applies to information we collect through the website purpleforgecapital.com (the "Site") and through related phone, email, SMS, and mail communications.</p>
+
+    <div class="toc" aria-label="Table of contents">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#who">Who We Are</a></li>
+        <li><a href="#collect">Information We Collect</a></li>
+        <li><a href="#use">How We Use Your Information</a></li>
+        <li><a href="#sms">SMS / Text Message Communications</a></li>
+        <li><a href="#share">How We Share Your Information</a></li>
+        <li><a href="#cookies">Cookies and Tracking</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#security">Data Security &amp; MA WISP</a></li>
+        <li><a href="#rights">Your Rights and Choices</a></li>
+        <li><a href="#california">California Privacy Rights</a></li>
+        <li><a href="#do-not-sell">Do Not Sell or Share</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
     </div>
-  </div>
 
-  <div class="section-block">
-    <h2>1. Who We Are</h2>
-    <p>Purple Forge Capital ("we," "us," or "our") is a real estate investment company located at 500 Grossman Dr #1048, Braintree, MA 02184. We operate the website purpleforgecapital.com (the "Site") and contact homeowners in Massachusetts who may be interested in selling their property for cash.</p>
-    <p>For questions about this Privacy Policy, you may contact us at:<br/>
-    <strong>Email:</strong> <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a><br/>
-    <strong>Phone:</strong> <a href="tel:5083776864">(508) 377-6864</a></p>
-  </div>
+    <h2 id="who"><span class="num">01</span> Who We Are</h2>
+    <p>Purple Forge Capital LLC is a Massachusetts limited liability company located at 500 Grossman Dr #1048, Braintree, MA 02184. We are a real estate investment company that purchases residential property in Massachusetts directly. For questions about this Privacy Policy, contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a> or <a href="tel:5083776864">(508) 377-6864</a>.</p>
 
-  <div class="section-block">
-    <h2>2. Information We Collect</h2>
-    <p>We collect information you voluntarily provide when you submit a form on our Site. This may include:</p>
+    <h2 id="collect"><span class="num">02</span> Information We Collect</h2>
+    <p>We collect information in the following categories:</p>
     <table class="data-table">
       <thead>
         <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
       </thead>
       <tbody>
-        <tr><td>Contact Information</td><td>First name, last name, phone number, email address</td><td>To contact you about your property inquiry</td></tr>
-        <tr><td>Property Information</td><td>Street address, city, state, property condition, reason for selling</td><td>To evaluate and make a cash offer on your property</td></tr>
-        <tr><td>Usage Data</td><td>IP address, browser type, pages visited, time on site</td><td>To improve Site performance and user experience</td></tr>
+        <tr>
+          <td><strong>Contact information</strong></td>
+          <td>First and last name, phone number, email address, mailing address</td>
+          <td>To contact you about your property inquiry and related real estate services</td>
+        </tr>
+        <tr>
+          <td><strong>Property information</strong></td>
+          <td>Property address, condition, reason for selling, ownership status</td>
+          <td>To evaluate the property and prepare a cash offer</td>
+        </tr>
+        <tr>
+          <td><strong>Communications</strong></td>
+          <td>Records of phone calls, text messages, emails, and form submissions</td>
+          <td>To respond to you and maintain business records</td>
+        </tr>
+        <tr>
+          <td><strong>Public records data</strong></td>
+          <td>Tax assessor records, deed records, probate filings, foreclosure notices</td>
+          <td>To identify potential acquisition opportunities and evaluate properties</td>
+        </tr>
+        <tr>
+          <td><strong>Site usage data</strong></td>
+          <td>IP address, browser type, device type, pages visited, time on site, referring URL</td>
+          <td>To operate, secure, and improve the Site</td>
+        </tr>
       </tbody>
     </table>
-    <p>We do not collect sensitive personal information such as Social Security numbers, financial account details, or government-issued ID numbers through this Site.</p>
-  </div>
+    <p>We do <strong>not</strong> knowingly collect Social Security numbers, financial account numbers, or government-issued ID numbers through this Site. If such information is required as part of an actual purchase transaction, it will be collected separately through a secure process.</p>
 
-  <div class="section-block">
-    <h2>3. How We Use Your Information</h2>
-    <p>We use the information we collect for the following purposes:</p>
+    <h2 id="use"><span class="num">03</span> How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
     <ul>
-      <li>To respond to your property inquiry and make a cash offer</li>
-      <li>To contact you by phone, email, or SMS regarding your inquiry and related property services</li>
-      <li>To send you marketing messages about property offers and real estate investment opportunities from Purple Forge Capital</li>
-      <li>To improve our Site, services, and communications</li>
-      <li>To comply with legal obligations and enforce our Terms of Use</li>
+      <li>Respond to your inquiry and prepare a cash offer for your property;</li>
+      <li>Contact you by phone, email, SMS, or mail about your inquiry;</li>
+      <li>With your separate consent, send you marketing communications about property offers and related real estate investment opportunities;</li>
+      <li>Operate, maintain, secure, and improve the Site;</li>
+      <li>Maintain business records and comply with legal, tax, and regulatory obligations;</li>
+      <li>Enforce our <a href="terms-of-use.html">Terms of Use</a> and protect against fraud, misuse, or unauthorized access.</li>
     </ul>
-  </div>
 
-  <div class="section-block">
-    <h2>4. SMS / Text Message Communications</h2>
-    <p>By submitting a form on our Site and checking the marketing consent checkbox, you expressly consent to receive SMS text messages from Purple Forge Capital at the phone number you provided. These messages may include updates about property offers, follow-up communications, and related real estate services.</p>
+    <h2 id="sms"><span class="num">04</span> SMS / Text Message Communications</h2>
+    <p>If you check the optional marketing-SMS consent checkbox on our form, you expressly consent to receive recurring marketing text messages from Purple Forge Capital at the phone number you provided, including messages sent using an automatic telephone dialing system or prerecorded or artificial voice technology. <strong>Consent is not a condition of any purchase or service.</strong></p>
     <ul>
-      <li><strong>Message frequency:</strong> Varies based on your inquiry and our follow-up schedule</li>
-      <li><strong>Msg &amp; data rates may apply</strong> depending on your mobile carrier and plan</li>
-      <li><strong>To opt out:</strong> Reply STOP to any text message at any time to cancel</li>
-      <li><strong>For help:</strong> Reply HELP or contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+      <li><strong>Message frequency:</strong> Varies based on your inquiry and our follow-up schedule.</li>
+      <li><strong>Msg &amp; data rates may apply</strong> depending on your mobile carrier and plan.</li>
+      <li><strong>To opt out:</strong> Reply STOP to any text message at any time.</li>
+      <li><strong>For help:</strong> Reply HELP or contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>.</li>
     </ul>
-    <p>We will never use SMS to send unsolicited spam. You can always withdraw your consent by replying STOP.</p>
-  </div>
+    <p>We will not share your mobile number or SMS opt-in data with third parties or affiliates for their own marketing purposes.</p>
 
-  <div class="section-block">
-    <h2>5. How We Share Your Information</h2>
-    <p>Your personal information is secure and will <strong>never be sold to third parties.</strong> We may share your information only in the following limited circumstances:</p>
+    <h2 id="share"><span class="num">05</span> How We Share Your Information</h2>
+    <p>We do not sell your personal information. We may share it only in the following limited circumstances:</p>
     <ul>
-      <li><strong>Service providers:</strong> Trusted vendors who assist us in operating our website or conducting our business (e.g., form processing, email delivery) — subject to strict confidentiality obligations</li>
-      <li><strong>Legal compliance:</strong> When required by law, court order, or government authority</li>
-      <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of our business assets, your information may be transferred as part of that transaction</li>
-      <li><strong>Protection of rights:</strong> To protect the rights, property, or safety of Purple Forge Capital, our clients, or others</li>
+      <li><strong>Service providers.</strong> Vendors that help us operate the business — for example, web hosting, form processing, email delivery, SMS platforms, CRM software (such as Podio), analytics, and accounting. These vendors are bound by confidentiality and use the information only to provide services to us.</li>
+      <li><strong>Affiliated entities and capital partners.</strong> If we assign a purchase contract to an affiliated entity or capital partner, we may share property and transaction information necessary to complete the transaction. Any such assignment will be disclosed in the purchase and sale agreement you sign.</li>
+      <li><strong>Title and closing professionals.</strong> Title companies, attorneys, escrow agents, and other closing professionals as needed to complete a transaction.</li>
+      <li><strong>Legal compliance.</strong> Government authorities, courts, or other parties when required by law, subpoena, court order, or to respond to lawful requests.</li>
+      <li><strong>Business transfers.</strong> In the event of a merger, acquisition, sale of assets, or similar transaction, information may be transferred to the successor entity.</li>
+      <li><strong>Protection of rights.</strong> To protect the rights, property, or safety of Purple Forge Capital, our customers, or others, including investigating and preventing fraud or other unlawful activity.</li>
     </ul>
-  </div>
 
-  <div class="section-block">
-    <h2>6. Cookies and Tracking Technologies</h2>
-    <p>Our Site may use cookies and similar tracking technologies to enhance your browsing experience and analyze Site traffic. Cookies are small data files stored on your device. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some portions of the Site may not function properly.</p>
-    <p>We may also use analytics tools (such as Google Analytics) to understand how visitors interact with our Site. These tools may collect information such as your IP address, browser type, and pages visited. This data is aggregated and does not identify you personally.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>7. Data Retention</h2>
-    <p>We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, including responding to your property inquiry, maintaining our business records, and complying with legal obligations. When your information is no longer needed, we will securely delete or anonymize it.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>8. Data Security</h2>
-    <p>We implement reasonable technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>9. Your Rights and Choices</h2>
-    <p>Depending on your location and applicable law, you may have the following rights regarding your personal information:</p>
+    <h2 id="cookies"><span class="num">06</span> Cookies and Tracking Technologies</h2>
+    <p>We use cookies and similar tracking technologies on the Site. These fall into the following categories:</p>
     <ul>
-      <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
-      <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>
-      <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain legal exceptions</li>
-      <li><strong>Opt-out of marketing:</strong> Unsubscribe from email communications at any time by contacting us, or reply STOP to opt out of SMS messages</li>
-      <li><strong>Withdraw consent:</strong> Where processing is based on your consent, you may withdraw it at any time without affecting the lawfulness of prior processing</li>
+      <li><strong>Essential cookies.</strong> Required for the Site to function — for example, to remember your cookie preferences.</li>
+      <li><strong>Analytics cookies.</strong> If you accept analytics cookies, we use Google Analytics to understand how visitors interact with the Site. Google Analytics may collect your IP address, browser type, device type, pages visited, and referring URL. You can learn more at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li><strong>Advertising / conversion cookies.</strong> If applicable, we may use advertising-platform pixels (such as Meta Pixel or Google Ads) to measure ad performance. These will only be loaded if you have accepted non-essential cookies through our cookie banner.</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a> or call <a href="tel:5083776864">(508) 377-6864</a>. We will respond within a reasonable timeframe.</p>
-  </div>
+    <p>You can manage cookies through our cookie banner (shown on your first visit) or through your browser settings. Most browsers allow you to refuse all cookies, accept only certain cookies, or be notified when a cookie is set. Disabling cookies may affect Site functionality.</p>
+    <p>We respect the Global Privacy Control (GPC) signal. If your browser sends a GPC signal, we will treat it as a request to opt out of any "sale" or "sharing" of personal information for cross-context behavioral advertising.</p>
 
-  <div class="section-block">
-    <h2>10. Children's Privacy</h2>
-    <p>Our Site is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately and we will take steps to delete that information.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>11. Third-Party Links</h2>
-    <p>Our Site may contain links to third-party websites. This Privacy Policy does not apply to those sites, and we are not responsible for their privacy practices. We encourage you to review the privacy policies of any third-party sites you visit.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>12. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make changes, we will update the "Last Updated" date at the top of this page. Your continued use of the Site after any changes constitutes your acceptance of the updated policy. We encourage you to review this policy periodically.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>13. Governing Law</h2>
-    <p>This Privacy Policy is governed by the laws of the Commonwealth of Massachusetts. Any disputes arising from this policy shall be resolved in the state or federal courts of Norfolk County, Massachusetts.</p>
-  </div>
-
-  <div class="section-block">
-    <h2>14. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:</p>
+    <h2 id="retention"><span class="num">07</span> Data Retention</h2>
+    <p>We retain personal information for as long as necessary to fulfill the purposes for which it was collected, including responding to your inquiry, maintaining business and tax records, and complying with legal obligations. Typical retention periods include:</p>
     <ul>
-      <li><strong>Purple Forge Capital</strong></li>
-      <li>500 Grossman Dr #1048, Braintree, MA 02184</li>
-      <li>Phone: <a href="tel:5083776864">(508) 377-6864</a></li>
-      <li>Email: <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+      <li>Active inquiries: for the duration of communication plus 24 months;</li>
+      <li>Closed transaction records: at least seven (7) years, consistent with tax and recordkeeping obligations;</li>
+      <li>Marketing opt-in records: until you opt out, plus a reasonable period to honor your opt-out;</li>
+      <li>Site analytics data: typically up to 26 months in Google Analytics, or as configured.</li>
     </ul>
-  </div>
+    <p>When information is no longer needed, we securely delete or anonymize it.</p>
 
-</div>
+    <h2 id="security"><span class="num">08</span> Data Security and Massachusetts WISP</h2>
+    <p>We maintain a Written Information Security Program (WISP) in accordance with Massachusetts regulations on the protection of personal information (201 CMR 17.00). Our security measures include access controls, encrypted transmission of form data, password protection of business systems, and limits on who within our business can access personal information. No method of transmission or storage is 100% secure, but we use reasonable administrative, technical, and physical safeguards designed to protect your information.</p>
+    <p>If we experience a security incident affecting your personal information, we will notify you and applicable regulators as required by Massachusetts law (M.G.L. c. 93H) and any other applicable laws.</p>
 
-<footer class="page-footer">
-  <div>
-    <div class="pf-name">Purple Forge <span>Capital</span></div>
-    <div class="pf-copy">&copy; 2025 Purple Forge Capital &middot; Massachusetts Real Estate</div>
+    <h2 id="rights"><span class="num">09</span> Your Rights and Choices</h2>
+    <p>Depending on your state of residence, you may have some or all of the following rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+      <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information.</li>
+      <li><strong>Deletion:</strong> Request that we delete your personal information, subject to legal exceptions.</li>
+      <li><strong>Opt out of marketing:</strong> Reply STOP to any marketing SMS; click "unsubscribe" in any marketing email; or contact us directly.</li>
+      <li><strong>Withdraw consent:</strong> Where processing is based on your consent, you may withdraw consent at any time.</li>
+      <li><strong>Opt out of sale or sharing:</strong> See <a href="#do-not-sell">Section 11</a>.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a> or <a href="tel:5083776864">(508) 377-6864</a>. We will respond within the timeframe required by applicable law (typically 30–45 days). We may need to verify your identity before fulfilling a request.</p>
+
+    <h2 id="california"><span class="num">10</span> California Privacy Rights (CCPA / CPRA)</h2>
+    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA):</p>
+    <ul>
+      <li>The right to know what categories and specific pieces of personal information we have collected about you;</li>
+      <li>The right to know the sources of that information, the business purpose for collecting it, and the categories of third parties with whom it is shared;</li>
+      <li>The right to request deletion of your personal information;</li>
+      <li>The right to correct inaccurate personal information;</li>
+      <li>The right to opt out of the "sale" or "sharing" of personal information;</li>
+      <li>The right to limit the use of sensitive personal information;</li>
+      <li>The right not to be discriminated against for exercising your rights.</li>
+    </ul>
+    <p><strong>Categories of personal information collected in the last 12 months:</strong> identifiers (name, email, phone, IP address), commercial information (property inquiry details), internet activity (Site usage data), and geolocation (general, based on IP).</p>
+    <p><strong>Sale and sharing.</strong> We do not sell personal information in exchange for money. We may "share" personal information (as defined under CPRA) with advertising partners through pixels and cookies if you opt into analytics/advertising cookies. You can opt out at any time using the controls described in <a href="#do-not-sell">Section 11</a>.</p>
+    <p>You may also designate an authorized agent to make a request on your behalf. We may require verification of the agent's authority.</p>
+
+    <h2 id="do-not-sell"><span class="num">11</span> Do Not Sell or Share My Personal Information</h2>
+    <p>To opt out of the "sale" or "sharing" of your personal information for cross-context behavioral advertising, you may:</p>
+    <ul>
+      <li>Use the "Essentials Only" option in our cookie banner;</li>
+      <li>Send a Global Privacy Control (GPC) signal from your browser (we honor GPC);</li>
+      <li>Email us at <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a> with the subject line "Do Not Sell or Share";</li>
+      <li>Call us at <a href="tel:5083776864">(508) 377-6864</a>.</li>
+    </ul>
+
+    <h2 id="children"><span class="num">12</span> Children's Privacy</h2>
+    <p>This Site is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child, please contact us and we will delete that information.</p>
+
+    <h2 id="changes"><span class="num">13</span> Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make changes, we will update the "Last Updated" date at the top of this page. Your continued use of the Site after changes are posted constitutes your acceptance of the updated policy. For material changes, we may also notify you by email or another reasonable means.</p>
+
+    <h2 id="contact"><span class="num">14</span> Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:</p>
+    <div class="contact-card">
+      <h4>Purple Forge Capital LLC</h4>
+      <ul>
+        <li>500 Grossman Dr #1048, Braintree, MA 02184</li>
+        <li>Phone: <a href="tel:5083776864">(508) 377-6864</a></li>
+        <li>Email: <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a></li>
+      </ul>
+    </div>
+
   </div>
-  <div class="pf-links">
-    <a href="index.html">Home</a>
-    <a href="terms-of-use.html">Terms of Use</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="tel:5083776864">(508) 377-6864</a>
-    <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span>&copy; 2025 Purple Forge Capital LLC · Massachusetts Real Estate</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
   </div>
 </footer>
 
