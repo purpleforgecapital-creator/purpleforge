@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Purple Forge Capital LLC is a Massachusetts-based real estate investor making direct cash offers to homeowners across the Commonwealth. No agents, no commissions, no repairs."/>
 <title>Purple Forge Capital — We Buy Houses Massachusetts</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -26,6 +27,8 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+*:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 2.8rem;height:72px;background:var(--white);border-bottom:1px solid var(--rule2);}
 .logo-wrap{display:flex;align-items:center;gap:0.85rem;text-decoration:none;}
@@ -39,6 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--ink);}
 .nav-cta{background:var(--navy);color:var(--white);padding:0.6rem 1.5rem;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;transition:background 0.2s;}
 .nav-cta:hover{background:var(--navy2);}
+
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding-top:72px;}
 .hero-left{background:var(--off);padding:4rem 3.5rem 4rem 3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule2);position:relative;}
@@ -55,6 +59,7 @@ h1 span{color:var(--gold);}
 .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--rule2);flex-wrap:wrap;}
 .hero-stats .stat-n{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--navy);line-height:1;}
 .hero-stats .stat-l{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--light-txt);margin-top:4px;}
+
 /* RIGHT PANEL */
 .panel-headline{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);margin-bottom:0.35rem;line-height:1.2;}
 .panel-sub{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1.75rem;font-weight:300;}
@@ -68,9 +73,11 @@ h1 span{color:var(--gold);}
 .panel-contact a{color:rgba(255,255,255,0.6);font-size:0.82rem;text-decoration:none;font-weight:300;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem;}
 .panel-contact a:hover{color:var(--white);}
 .panel-contact a span{color:var(--gold-lt);}
+
 /* FLOATING CTA */
 .floating-cta{position:fixed;bottom:2rem;right:2rem;z-index:300;background:var(--navy);color:var(--white);padding:0.85rem 1.6rem;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;box-shadow:0 4px 20px rgba(30,43,58,0.25);transition:background 0.2s,transform 0.2s;border-left:3px solid var(--gold);}
 .floating-cta:hover{background:var(--navy2);transform:translateY(-2px);}
+
 /* POPUP */
 .popup-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(28,27,24,0.55);align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(4px);}
 .popup-overlay.active{display:flex;}
@@ -101,17 +108,21 @@ h1 span{color:var(--gold);}
 /* ── CONSENT BLOCK ── */
 .consent-block{background:var(--off);border:1px solid var(--rule2);border-left:2px solid var(--gold);padding:1rem 1.1rem;border-radius:2px;}
 .consent-check-row{display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.7rem;}
+.consent-check-row:last-child{margin-bottom:0;}
 .consent-check-row input[type="checkbox"]{width:14px;height:14px;min-width:14px;margin-top:3px;accent-color:var(--navy);cursor:pointer;flex-shrink:0;}
 .consent-check-label{font-size:0.78rem;color:var(--ink2);line-height:1.55;font-weight:500;}
+.consent-check-label strong{color:var(--navy);font-weight:700;text-transform:uppercase;font-size:0.7rem;letter-spacing:0.08em;}
 .consent-check-label a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
 .consent-check-label a:hover{color:var(--gold2);}
-.consent-legal-text{font-size:0.7rem;color:var(--muted);line-height:1.7;font-weight:300;}
+.consent-divider{height:1px;background:var(--rule);margin:0.7rem 0;}
+.consent-fineprint{font-size:0.7rem;color:var(--muted);line-height:1.6;font-weight:300;margin-top:0.3rem;}
 
 /* SECTIONS */
 .section-tag{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.85rem;}
 .section-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
 h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:0.04em;line-height:1.05;margin-bottom:0.5rem;color:var(--ink);}
 .section-sub{font-size:0.95rem;font-weight:300;color:var(--muted);line-height:1.7;max-width:540px;margin-top:0.5rem;}
+
 /* PROCESS */
 .process{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;border-top:2px solid var(--ink);}
@@ -120,6 +131,7 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .step-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--cream2);line-height:1;margin-bottom:1rem;}
 .step-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);margin-bottom:0.75rem;}
 .step-desc{font-size:0.83rem;line-height:1.8;color:var(--muted);font-weight:300;}
+
 /* ABOUT */
 .about{background:var(--off);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3.5rem;}
@@ -129,6 +141,7 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .about-card{background:var(--white);border:1px solid var(--rule);border-left:2px solid var(--gold);padding:1.5rem 1.5rem 1.5rem 1.25rem;}
 .about-card h4{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.5rem;}
 .about-card p{font-size:0.82rem;color:var(--muted);line-height:1.7;font-weight:300;}
+
 /* SITUATIONS */
 .situations{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3.5rem;background:var(--rule);}
@@ -138,6 +151,14 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .sit-card:hover .sit-marker{width:44px;}
 .sit-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;}
 .sit-desc{font-size:0.82rem;line-height:1.75;color:var(--muted);font-weight:300;}
+
+/* FORECLOSURE NOTICE */
+.foreclosure-notice{margin-top:2.5rem;background:var(--off);border:1px solid var(--rule2);border-left:2px solid var(--gold);padding:1.5rem 1.75rem;}
+.foreclosure-notice-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.foreclosure-notice-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold);}
+.foreclosure-notice p{font-size:0.82rem;color:var(--ink2);line-height:1.75;font-weight:400;}
+.foreclosure-notice p strong{color:var(--ink);font-weight:600;}
+
 /* WHY SELL */
 .why{background:var(--off);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
@@ -156,7 +177,9 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .vs-table tr:last-child td{border-bottom:none;}
 .vs-table td:first-child{color:var(--muted);font-weight:300;}
 .vs-table td:nth-child(2){color:var(--navy);font-weight:600;text-align:center;}
-.vs-table td:last-child{color:var(--cream2);text-decoration:line-through;font-size:0.77rem;text-align:right;}
+.vs-table td:last-child{color:var(--light-txt);font-size:0.8rem;text-align:right;font-weight:300;}
+.vs-footnote{font-size:0.7rem;color:var(--light-txt);font-weight:300;line-height:1.7;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule);}
+
 /* FAQ */
 .faq{background:var(--white);padding:6rem 3rem;border-top:1px solid var(--rule);}
 .faq-list{margin-top:3rem;}
@@ -166,27 +189,57 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.5vw,2.8rem);lett
 .faq-question:hover{color:var(--gold);}
 .faq-icon{font-size:1.2rem;color:var(--gold);font-weight:300;transition:transform 0.3s;flex-shrink:0;margin-left:1rem;}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;}
-.faq-answer.open{max-height:300px;padding-bottom:1.5rem;}
+.faq-answer.open{max-height:600px;padding-bottom:1.5rem;}
 .faq-answer p{font-size:0.9rem;line-height:1.85;color:var(--muted);font-weight:300;}
 .faq-question.active{color:var(--gold);}
 .faq-question.active .faq-icon{transform:rotate(45deg);}
+
 /* BOTTOM CTA */
 .bottom-cta{background:var(--navy);padding:4rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:2px solid var(--gold);}
 .bcta-text h2{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:0.04em;color:var(--white);line-height:1.05;}
 .bcta-text p{color:rgba(255,255,255,0.45);font-size:0.9rem;font-weight:300;margin-top:0.4rem;}
 .bcta-btn{background:var(--gold);color:var(--white);padding:1rem 2.5rem;font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;font-family:'Barlow Condensed',sans-serif;white-space:nowrap;transition:background 0.2s;}
 .bcta-btn:hover{background:var(--gold2);}
+
 /* FOOTER */
-footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
+footer{background:var(--ink);padding:3rem;border-top:1px solid rgba(255,255,255,0.06);}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-wrap:wrap;}
 .footer-brand{display:flex;align-items:flex-start;gap:1rem;}
 .footer-logo-name{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:var(--white);letter-spacing:0.08em;}
 .footer-logo-name span{color:var(--gold-lt);}
-.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:0.25rem;}
-.footer-address{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.3rem;line-height:1.7;}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.4rem;}
+.footer-address{font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem;line-height:1.7;}
 .footer-links{display:flex;flex-direction:column;gap:0.45rem;margin-top:0.6rem;}
-.footer-links a{color:rgba(255,255,255,0.45);font-size:0.78rem;text-decoration:none;transition:color 0.2s;}
+.footer-links a{color:rgba(255,255,255,0.5);font-size:0.78rem;text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--gold-lt);}
-.footer-disclaimer{font-size:0.65rem;color:rgba(255,255,255,0.18);max-width:460px;line-height:1.7;margin-top:0.75rem;}
+.footer-col h5{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.85rem;}
+.footer-col{min-width:160px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.footer-col a{color:rgba(255,255,255,0.42);font-size:0.78rem;text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:var(--gold-lt);}
+.footer-eho{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.15);padding:0.4rem 0.65rem;border-radius:2px;font-size:0.65rem;color:rgba(255,255,255,0.5);margin-top:0.9rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;}
+.footer-eho-mark{width:14px;height:14px;background:var(--white);color:var(--ink);border-radius:1px;display:grid;place-items:center;font-size:8px;font-weight:700;font-family:'Barlow Condensed',sans-serif;letter-spacing:0;}
+.footer-legal{margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);max-width:920px;}
+.footer-legal-block{margin-bottom:1rem;}
+.footer-legal-block h6{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.4rem;}
+.footer-legal-block p{font-size:0.7rem;color:rgba(255,255,255,0.32);line-height:1.7;font-weight:300;}
+.footer-bottom{margin-top:2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.68rem;color:rgba(255,255,255,0.25);letter-spacing:0.05em;}
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:1.2rem;left:1.2rem;right:1.2rem;max-width:540px;margin:0 auto;background:var(--white);border:1px solid var(--rule2);border-top:2px solid var(--gold);padding:1.4rem 1.6rem;z-index:400;display:none;box-shadow:0 8px 32px rgba(28,27,24,0.14);border-radius:2px;}
+.cookie-banner.show{display:block;}
+.cookie-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin-bottom:0.5rem;}
+.cookie-banner p{font-size:0.78rem;color:var(--muted);line-height:1.6;font-weight:300;margin-bottom:1rem;}
+.cookie-banner p a{color:var(--gold);text-decoration:underline;text-underline-offset:2px;}
+.cookie-actions{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.cookie-btn{flex:1;min-width:120px;padding:0.7rem 1rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--rule2);background:var(--white);color:var(--ink);font-family:'Barlow Condensed',sans-serif;cursor:pointer;border-radius:2px;transition:all 0.2s;}
+.cookie-btn:hover{border-color:var(--gold);color:var(--gold);}
+.cookie-btn.primary{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.cookie-btn.primary:hover{background:var(--navy2);border-color:var(--navy2);color:var(--white);}
+
+/* MOTION */
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
 /* RESPONSIVE */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;}
@@ -198,7 +251,8 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
   nav{padding:0 1.5rem;}
   .nav-links{display:none;}
   .process,.why,.faq,.about,.situations,.bottom-cta{padding:4rem 1.5rem;}
-  footer{flex-direction:column;padding:2.5rem 1.5rem;}
+  footer{padding:2.5rem 1.5rem;}
+  .footer-top{flex-direction:column;}
   .floating-cta{bottom:1rem;right:1rem;}
   .frow{grid-template-columns:1fr;}
   .sit-grid{grid-template-columns:1fr 1fr;}
@@ -215,7 +269,7 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 <!-- NAV -->
 <nav>
   <a href="#" class="logo-wrap">
-    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <svg class="logo-hex" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
       <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
       <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#1E2B3A" stroke-width="1" opacity="0.25"/>
@@ -244,14 +298,14 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <p class="hero-desc">Selling your home should not be stressful. We make all-cash offers across Massachusetts — no repairs, no agents, no fees. Close on your timeline.</p>
     <div class="offer-pills">
       <span class="pill">&#10003;&nbsp; No Repairs Needed</span>
-      <span class="pill">&#10003;&nbsp; No Agent Fees</span>
+      <span class="pill">&#10003;&nbsp; No Agent Commissions</span>
       <span class="pill">&#10003;&nbsp; No Closing Costs</span>
       <span class="pill">&#10003;&nbsp; Close on Your Timeline</span>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-n">100+</div><div class="stat-l">Homes Purchased</div></div>
-      <div><div class="stat-n">$0</div><div class="stat-l">Fees or Commissions</div></div>
-      <div><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
+      <div><div class="stat-n">$0</div><div class="stat-l">Agent Commissions</div></div>
+      <div><div class="stat-n">24h</div><div class="stat-l">Initial Response</div></div>
+      <div><div class="stat-n">MA</div><div class="stat-l">Statewide Coverage</div></div>
     </div>
   </div>
   <div class="hero-right-panel">
@@ -260,10 +314,10 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <button class="panel-cta-btn" onclick="openPopup()">Request My Free Cash Offer &rarr;</button>
     <div class="panel-features">
       <div class="panel-feature"><div class="panel-feature-dot"></div><span>We buy in any condition — no repairs needed</span></div>
-      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Zero agent commissions or closing costs</span></div>
+      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Zero agent commissions or listing fees</span></div>
       <div class="panel-feature"><div class="panel-feature-dot"></div><span>Close on your schedule — fast or flexible</span></div>
-      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Local Massachusetts investors you can trust</span></div>
-      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Fair, transparent offer — no lowball tactics</span></div>
+      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Local Massachusetts investors</span></div>
+      <div class="panel-feature"><div class="panel-feature-dot"></div><span>Fair, transparent offers in plain English</span></div>
     </div>
     <div class="panel-divider"></div>
     <div class="panel-contact">
@@ -277,28 +331,28 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 <button class="floating-cta" onclick="openPopup()">Get Cash Offer</button>
 
 <!-- POPUP FORM -->
-<div class="popup-overlay" id="popupOverlay" onclick="closeOnOverlay(event)">
+<div class="popup-overlay" id="popupOverlay" onclick="closeOnOverlay(event)" role="dialog" aria-modal="true" aria-labelledby="formHeadline">
   <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()">&#10005;</button>
-    <div class="form-headline">Get Your Free<br/>Cash Offer Today</div>
+    <button class="popup-close" onclick="closePopup()" aria-label="Close form">&#10005;</button>
+    <div class="form-headline" id="formHeadline">Get Your Free<br/>Cash Offer Today</div>
     <div class="form-sub">No obligation &nbsp;&middot;&nbsp; Response within 24 hours &nbsp;&middot;&nbsp; 100% confidential</div>
     <form id="leadForm" onsubmit="submitForm(event)">
       <div class="lead-form">
         <div class="frow">
-          <div class="fgroup"><label>First Name *</label><input type="text" name="firstName" id="firstName" placeholder="Jane" required/></div>
-          <div class="fgroup"><label>Last Name *</label><input type="text" name="lastName" id="lastName" placeholder="Smith" required/></div>
+          <div class="fgroup"><label for="firstName">First Name *</label><input type="text" name="firstName" id="firstName" placeholder="Jane" required autocomplete="given-name"/></div>
+          <div class="fgroup"><label for="lastName">Last Name *</label><input type="text" name="lastName" id="lastName" placeholder="Smith" required autocomplete="family-name"/></div>
         </div>
-        <div class="fgroup"><label>Property Address *</label><input type="text" name="address" id="address" placeholder="123 Main Street" required/></div>
+        <div class="fgroup"><label for="address">Property Address *</label><input type="text" name="address" id="address" placeholder="123 Main Street" required autocomplete="street-address"/></div>
         <div class="frow">
-          <div class="fgroup"><label>City *</label><input type="text" name="city" id="city" placeholder="Quincy" required/></div>
-          <div class="fgroup"><label>State *</label><input type="text" name="state" id="state" placeholder="MA" required/></div>
+          <div class="fgroup"><label for="city">City *</label><input type="text" name="city" id="city" placeholder="Quincy" required autocomplete="address-level2"/></div>
+          <div class="fgroup"><label for="state">State *</label><input type="text" name="state" id="state" placeholder="MA" required autocomplete="address-level1"/></div>
         </div>
         <div class="frow">
-          <div class="fgroup"><label>Phone *</label><input type="tel" name="phone" id="phone" placeholder="(508) 377-6864" required/></div>
-          <div class="fgroup"><label>Email *</label><input type="email" name="email" id="email" placeholder="your@email.com" required/></div>
+          <div class="fgroup"><label for="phone">Phone *</label><input type="tel" name="phone" id="phone" placeholder="(508) 377-6864" required autocomplete="tel"/></div>
+          <div class="fgroup"><label for="email">Email *</label><input type="email" name="email" id="email" placeholder="your@email.com" required autocomplete="email"/></div>
         </div>
         <div class="fgroup">
-          <label>Why Are You Selling?</label>
+          <label for="reason">Why Are You Selling?</label>
           <select name="reason" id="reason">
             <option value="">Select a reason...</option>
             <option value="Inherited property">Inherited property</option>
@@ -312,7 +366,7 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
           </select>
         </div>
         <div class="fgroup">
-          <label>Property Condition</label>
+          <label for="condition">Property Condition</label>
           <select name="condition" id="condition">
             <option value="">Select condition...</option>
             <option value="Move-in ready">Move-in ready</option>
@@ -322,25 +376,34 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
           </select>
         </div>
 
-        <!-- ── CONSENT BLOCK (added) ── -->
+        <!-- ── CONSENT BLOCK ── -->
         <div class="consent-block">
+          <!-- Required: Terms + contact -->
           <div class="consent-check-row">
             <input type="checkbox" id="consentCheck" name="consent" required/>
             <label class="consent-check-label" for="consentCheck">
-              I agree to the <a href="terms-of-use.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> of Purple Forge Capital.
+              <strong>Required.</strong> I agree to the <a href="terms-of-use.html" target="_blank" rel="noopener">Terms of Use</a> and <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I authorize Purple Forge Capital to contact me about my property inquiry by phone, email, or text.
             </label>
           </div>
-          <div class="consent-check-row" style="margin-bottom:0;">
-            <input type="checkbox" id="marketingCheck" name="marketing" required/>
+
+          <div class="consent-divider"></div>
+
+          <!-- Optional: Marketing SMS (TCPA-style, NOT required, NOT pre-checked) -->
+          <div class="consent-check-row">
+            <input type="checkbox" id="marketingCheck" name="marketing"/>
             <label class="consent-check-label" for="marketingCheck">
-              By submitting this form, you agree to receive Marketing Messages updates about property offers and related services and/or calls and/or emails from Purple Forge Capital. Message frequency varies. Reply STOP to unsubscribe. Msg &amp; data rates may apply for SMS. Your information is secure and will not be sold to third parties. Text HELP for HELP. Text STOP to cancel.
+              <strong>Optional.</strong> I also agree to receive recurring marketing text messages from Purple Forge Capital at the number provided, including messages sent using automated technology and/or prerecorded or artificial voice. Consent is not a condition of any purchase or service.
             </label>
+          </div>
+
+          <div class="consent-fineprint">
+            Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. Your information is secure and will not be sold to third parties.
           </div>
         </div>
 
         <button class="submit-btn" type="submit" id="submitBtn">Get My Free Cash Offer &rarr;</button>
-        <div id="formMessage" class="form-msg"></div>
-        <div class="form-trust">Your information is private and never shared with third parties.</div>
+        <div id="formMessage" class="form-msg" role="status"></div>
+        <div class="form-trust">Your information is private and never sold to third parties.</div>
         <div class="contact-quick">
           <a href="tel:5083776864" class="cq-item">(508) 377-6864</a>
           <a href="mailto:purpleforgecapital@gmail.com" class="cq-item">purpleforgecapital@gmail.com</a>
@@ -368,12 +431,12 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
     <div class="process-step">
       <div class="step-num">03</div>
       <div class="step-title">Choose Your Closing Date</div>
-      <p class="step-desc">You pick when to close — a timeline that works for you. We handle all paperwork from start to finish.</p>
+      <p class="step-desc">You pick when to close — a timeline that works for you. We coordinate all paperwork with the title company.</p>
     </div>
     <div class="process-step">
       <div class="step-num">04</div>
-      <div class="step-title">Collect Your Cash</div>
-      <p class="step-desc">Walk away with cash in hand on your schedule. No hidden fees, no surprises — just a clean, straightforward sale.</p>
+      <div class="step-title">Close and Get Paid</div>
+      <p class="step-desc">Walk away with cash at closing on your schedule. The net amount is spelled out in the purchase agreement — no surprises.</p>
     </div>
   </div>
 </section>
@@ -385,22 +448,22 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
   <div class="about-grid">
     <div class="about-text">
       <div class="about-highlight">We are Massachusetts real estate investors who believe selling your home should be simple, fair, and stress-free.</div>
-      <p>Purple Forge Capital was founded with one mission — to give Massachusetts homeowners a better way to sell. Whether you are dealing with an inherited property, facing foreclosure, going through a divorce, or simply ready to move on, we are here to help with a straightforward cash offer and zero hassle.</p>
-      <p>We are not a large corporation or a national hedge fund. We are local investors who know Massachusetts neighborhoods, understand the local market, and genuinely care about the people we work with. Every deal is handled with honesty, speed, and respect for your situation.</p>
-      <p>We have helped hundreds of Massachusetts homeowners move forward — and we would love to help you too.</p>
+      <p>Purple Forge Capital LLC was founded with one mission — to give Massachusetts homeowners a better way to sell. Whether you are dealing with an inherited property, a foreclosure timeline, a divorce, or simply ready to move on, we offer a straightforward cash offer with zero hassle.</p>
+      <p>We are not a large corporation or a national hedge fund. We are local investors who know Massachusetts neighborhoods, understand the local market, and care about the people we work with. Every deal is handled with honesty, speed, and respect for your situation.</p>
+      <p>We are real estate investors acting as direct buyers — not licensed real estate agents or brokers. Every offer is made as a principal purchaser and the trade-offs are explained upfront.</p>
     </div>
     <div class="about-cards">
       <div class="about-card">
         <h4>Our Mission</h4>
-        <p>To provide Massachusetts homeowners with a fast, honest, and hassle-free alternative to the traditional real estate process — putting more money in your pocket with less stress.</p>
+        <p>To provide Massachusetts homeowners with a fast, honest, and hassle-free alternative to the traditional listing process — putting more certainty in your pocket with less stress.</p>
       </div>
       <div class="about-card">
-        <h4>Local Expertise</h4>
-        <p>We know Massachusetts neighborhoods inside and out — from the South Shore to Greater Boston. Our local knowledge means fair, accurate offers delivered quickly.</p>
+        <h4>Local Knowledge</h4>
+        <p>We focus on Massachusetts — from the South Shore to Greater Boston, MetroWest, and surrounding markets. Local knowledge means fair, accurate offers delivered quickly.</p>
       </div>
       <div class="about-card">
         <h4>Our Promise</h4>
-        <p>No pressure. No games. No hidden fees. We will always be upfront about our offer and our process. If we make you an offer, we stand behind it.</p>
+        <p>No pressure. No games. No hidden fees. If we make you an offer, we explain how we got there — and any inspection contingencies are disclosed before you sign anything.</p>
       </div>
     </div>
   </div>
@@ -412,13 +475,19 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
   <h2>We Buy in Any Situation</h2>
   <p class="section-sub">Whatever your circumstances, we have worked with homeowners in similar situations and we are here to help — without judgment.</p>
   <div class="sit-grid">
-    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Inherited Property</div><p class="sit-desc">Dealing with a probate property or inherited home you do not want to manage? We make the process quick, respectful, and straightforward.</p></div>
-    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Facing Foreclosure</div><p class="sit-desc">Behind on payments or in foreclosure? We move fast to help you avoid further damage to your credit and walk away with cash.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Inherited Property</div><p class="sit-desc">Dealing with a probate property or inherited home you do not want to manage? We work directly with personal representatives and handle the process respectfully.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Facing Foreclosure</div><p class="sit-desc">Behind on payments or in foreclosure proceedings? A direct cash sale may be one option to consider. Massachusetts law gives you specific protections — see the notice below.</p></div>
     <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Relocating</div><p class="sit-desc">Moving for work or family? Skip the listings, showings, and months of waiting — we buy on your timeline.</p></div>
     <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Major Repairs Needed</div><p class="sit-desc">Fire damage, foundation issues, outdated systems — we buy homes as-is. You do not spend a single dollar fixing anything.</p></div>
-    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Divorce / Life Change</div><p class="sit-desc">A fast, private cash sale can bring closure and clarity during a difficult transition, letting you move forward on your terms.</p></div>
+    <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Divorce / Life Change</div><p class="sit-desc">A fast, private cash sale can bring closure during a difficult transition, letting both parties move forward on agreed terms.</p></div>
     <div class="sit-card"><div class="sit-marker"></div><div class="sit-title">Tired Landlord</div><p class="sit-desc">Done managing tenants and maintenance? We buy rental properties and multi-families — occupied or vacant, any condition.</p></div>
   </div>
+
+  <!-- MA Foreclosure Rescue Statute Notice -->
+  <aside class="foreclosure-notice" aria-label="Important notice for Massachusetts homeowners in foreclosure">
+    <div class="foreclosure-notice-tag">Important Notice — Foreclosure</div>
+    <p><strong>If you are in or facing foreclosure on a Massachusetts residential property, you have important legal rights.</strong> Under M.G.L. c. 244, § 35C and 940 CMR 25.00, homeowners selling property in foreclosure are entitled to a written contract with prescribed disclosures and a five (5) business day right to cancel after signing. Before signing any sale agreement, we strongly encourage you to consult with an attorney, a HUD-approved housing counselor, or the Massachusetts Attorney General's Consumer Protection Division. Purple Forge Capital is not a foreclosure consultant — we will not promise to stop a foreclosure or arrange for you to remain in the property after sale.</p>
+  </aside>
 </section>
 
 <!-- WHY SELL -->
@@ -431,23 +500,23 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
         <div class="why-item"><div class="why-num">01</div><div><h4>Sell As-Is — Any Condition</h4><p>Do not spend a dollar fixing your home. We purchase properties in any condition — fire damage, outdated systems, foundation issues. We have seen it all.</p></div></div>
         <div class="why-item"><div class="why-num">02</div><div><h4>No Agent, No Commission</h4><p>Traditional sales cost 5–6% in agent fees alone. Selling directly to us means you keep more of what your home is worth.</p></div></div>
         <div class="why-item"><div class="why-num">03</div><div><h4>Flexible Closing Timeline</h4><p>Need to close in 10 days? Need 60? You decide. We work entirely around your schedule and life circumstances.</p></div></div>
-        <div class="why-item"><div class="why-num">04</div><div><h4>Local Massachusetts Buyers</h4><p>We are not a national algorithm. We are local investors who know these neighborhoods and close with real, verified cash.</p></div></div>
+        <div class="why-item"><div class="why-num">04</div><div><h4>Real Cash, No Financing Contingency</h4><p>We buy with our own capital. That means no bank approvals, no last-minute appraisal issues, and no deals falling apart at the closing table.</p></div></div>
       </div>
     </div>
     <div class="vs-card">
       <div class="vs-title">Purple Forge Capital vs. Traditional Sale</div>
       <table class="vs-table">
-        <thead><tr><th></th><th>Purple Forge</th><th>Traditional Sale</th></tr></thead>
+        <thead><tr><th></th><th>Purple Forge</th><th>Traditional</th></tr></thead>
         <tbody>
           <tr><td>Closing Time</td><td>Your Timeline</td><td>60–90 Days</td></tr>
           <tr><td>Agent Commissions</td><td>$0</td><td>5–6%</td></tr>
-          <tr><td>Repairs Required</td><td>None</td><td>Often $10K–$40K+</td></tr>
+          <tr><td>Repairs Required</td><td>None</td><td>$10K–$40K+</td></tr>
           <tr><td>Showings</td><td>Zero</td><td>Many</td></tr>
-          <tr><td>Deal Fall Through Risk</td><td>None</td><td>High</td></tr>
-          <tr><td>Closing Costs</td><td>We Cover Them</td><td>2–5% Seller Pays</td></tr>
-          <tr><td>Cash in Hand</td><td>Guaranteed</td><td>Depends on Financing</td></tr>
+          <tr><td>Financing Contingency</td><td>None (Cash)</td><td>Common</td></tr>
+          <tr><td>Seller Closing Costs</td><td>We Cover Most</td><td>2–5%</td></tr>
         </tbody>
       </table>
+      <p class="vs-footnote">A direct cash offer typically prices below open-market retail in exchange for speed, certainty, and zero work on your end. We will always be upfront about that trade-off.</p>
     </div>
   </div>
 </section>
@@ -459,27 +528,35 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Do I need to make repairs before selling?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>Absolutely not. We purchase homes in any condition — fire damage, outdated systems, foundation issues, or hoarding situations. You do not need to clean, fix, or stage anything. We handle everything after closing so you can walk away without additional expense or effort.</p></div>
+      <div class="faq-answer"><p>No. We purchase homes in any condition — fire damage, outdated systems, foundation issues, or hoarding situations. You do not need to clean, fix, or stage anything. We handle everything after closing so you can walk away without additional expense or effort.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Are there any fees or commissions?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>None. There are no agent commissions, no closing costs, and no hidden fees. The offer we present is the amount you walk away with. Traditional real estate transactions can cost sellers 6–10% in combined fees — we eliminate all of that.</p></div>
+      <div class="faq-answer"><p>We do not charge agent commissions, and we typically cover standard seller closing costs. The net amount you receive at closing is spelled out in the purchase and sale agreement before you sign — no hidden fees. Traditional real estate transactions can cost sellers 6–10% in combined fees; we eliminate most of that.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">What types of properties do you buy?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>We purchase all types of residential properties across Massachusetts — single family homes, multi-family properties, condominiums, and rental units. Whether the home is vacant, tenant-occupied, inherited, or in foreclosure, we are prepared to make an offer.</p></div>
+      <div class="faq-answer"><p>We purchase residential property across Massachusetts — single-family homes, multi-family properties, condominiums, and rental units. Whether the home is vacant, tenant-occupied, inherited, or in foreclosure, we are prepared to review most situations.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How is this different from listing with an agent?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>When you list with an agent, you typically wait several months for the right buyer, pay 5–6% in commission, make requested repairs, host repeated showings, and risk the deal falling through. With Purple Forge Capital, you receive a guaranteed cash offer, pay zero fees, skip showings entirely, and close on your schedule.</p></div>
+      <div class="faq-answer"><p>Listing with an agent typically delivers full market value but takes 60–90+ days, requires repairs and showings, costs 5–6% in commission, and carries financing-contingency risk. Selling directly to us is faster and simpler, but the trade-off is that our offer will be below full retail. Both are valid options depending on your priorities — we will not pressure you either way.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">How quickly can you close?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>We can close in as few as 7–10 days when needed. If you require more time, that is equally fine — we follow your schedule. Once you accept our offer, we manage all paperwork and coordinate directly with the title company on your behalf.</p></div>
+      <div class="faq-answer"><p>We can close in as few as 7–10 days when title work allows. If you need more time, that is equally fine — we follow your schedule. Once you accept our offer and sign the purchase agreement, we coordinate directly with the title company.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Are you licensed real estate agents?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>No. We are real estate investors acting as direct principal buyers — not licensed real estate agents or brokers. We do not provide real estate brokerage services and nothing on this site should be construed as such. All offers are made as a principal purchaser, not on behalf of a third party. We may assign purchase agreements to affiliated entities or capital partners; if so, this is disclosed in the purchase agreement.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">What if I am in foreclosure?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>Massachusetts law gives homeowners in foreclosure specific protections — including a five (5) business day right to cancel any sale agreement under M.G.L. c. 244, § 35C. Before signing anything, we strongly encourage you to consult with an attorney or a HUD-approved housing counselor. We are not foreclosure consultants and we will not make promises about stopping a foreclosure or letting you remain in the home after sale.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-question" onclick="toggleFaq(this)">Is my information kept confidential?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><p>Yes, completely. All information you share with us remains private and is never sold or disclosed to third parties. Every conversation is treated with full discretion — regardless of the circumstances surrounding your sale.</p></div>
+      <div class="faq-answer"><p>Yes. Information you share is used only to evaluate your property and communicate with you about your inquiry. We do not sell your personal information to third parties. See our <a href="privacy-policy.html" style="color:var(--gold);text-decoration:underline;">Privacy Policy</a> for full details on collection, use, and your rights.</p></div>
     </div>
   </div>
 </section>
@@ -488,35 +565,100 @@ footer{background:var(--ink);padding:3rem;display:flex;align-items:flex-start;ju
 <div class="bottom-cta">
   <div class="bcta-text">
     <h2>Ready to Get Your Free Cash Offer?</h2>
-    <p>No repairs. No fees. No pressure. Close on your timeline.</p>
+    <p>No repairs. No commissions. No pressure. Close on your timeline.</p>
   </div>
   <button class="bcta-btn" onclick="openPopup()">Request My Cash Offer</button>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    <svg width="42px" height="42px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
-      <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
-      <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#F1EFE8" stroke-width="1" opacity="0.4"/>
-      <text font-family="Georgia,serif" font-size="17" font-weight="700" fill="#1E2B3A" x="40" y="41" text-anchor="middle" dominant-baseline="central" letter-spacing="1">PFC</text>
-    </svg>
-    <div>
-      <div class="footer-logo-name">Purple Forge <span>Capital</span></div>
-      <div class="footer-address">
-        500 Grossman Dr #1048<br/>
-        Braintree, MA 02184
+  <div class="footer-top">
+    <div class="footer-brand">
+      <svg width="42px" height="42px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="#F1EFE8"/>
+        <polygon points="40,5 71,22.5 71,57.5 40,75 9,57.5 9,22.5" fill="none" stroke="#9A7B3F" stroke-width="2.5"/>
+        <polygon points="40,14 63,27 63,53 40,66 17,53 17,27" fill="none" stroke="#F1EFE8" stroke-width="1" opacity="0.4"/>
+        <text font-family="Georgia,serif" font-size="17" font-weight="700" fill="#1E2B3A" x="40" y="41" text-anchor="middle" dominant-baseline="central" letter-spacing="1">PFC</text>
+      </svg>
+      <div>
+        <div class="footer-logo-name">Purple Forge <span>Capital</span></div>
+        <div class="footer-address">
+          Purple Forge Capital LLC<br/>
+          500 Grossman Dr #1048<br/>
+          Braintree, MA 02184
+        </div>
+        <div class="footer-links">
+          <a href="tel:5083776864">(508) 377-6864</a>
+          <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>
+        </div>
+        <div class="footer-eho" role="img" aria-label="Equal Housing Opportunity">
+          <span class="footer-eho-mark" aria-hidden="true">EHO</span>
+          <span>Equal Housing Opportunity</span>
+        </div>
       </div>
-      <div class="footer-copy">&copy; 2025 Purple Forge Capital &middot; Massachusetts Real Estate</div>
-      <div class="footer-links">
-        <a href="tel:5083776864">(508) 377-6864</a>
-        <a href="mailto:purpleforgecapital@gmail.com">purpleforgecapital@gmail.com</a>
-      </div>
-      <div class="footer-disclaimer">We are real estate investors, not licensed real estate agents. All offers are made directly and are not represented through a brokerage. Offers are subject to property inspection and due diligence.</div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Site</h5>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#situations">We Buy</a></li>
+        <li><a href="probate.html">Probate</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="privacy-policy.html#california">California Privacy Rights</a></li>
+        <li><a href="privacy-policy.html#do-not-sell">Do Not Sell or Share</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+      </ul>
     </div>
   </div>
+
+  <div class="footer-legal" id="accessibility">
+    <div class="footer-legal-block">
+      <h6>Important Disclosures</h6>
+      <p>Purple Forge Capital LLC is a Massachusetts real estate investment company. We are <strong style="color:rgba(255,255,255,0.55);">not</strong> licensed real estate brokers or agents, and we do not provide real estate brokerage services. All cash offers are made by Purple Forge Capital LLC as a direct principal buyer, not on behalf of any third party. Offers are subject to a property inspection and standard due diligence as set forth in the written purchase and sale agreement. We may assign purchase contracts to affiliated entities or capital partners; if so, this is disclosed in the purchase agreement.</p>
+    </div>
+    <div class="footer-legal-block">
+      <h6>Foreclosure Notice</h6>
+      <p>If you are in or facing foreclosure, Massachusetts law (M.G.L. c. 244, § 35C and 940 CMR 25.00) provides you with specific rights, including a five (5) business day right to cancel any sale agreement after signing. Consult an attorney or HUD-approved housing counselor before signing. We are not foreclosure consultants.</p>
+    </div>
+    <div class="footer-legal-block">
+      <h6>Not Legal, Tax, or Financial Advice</h6>
+      <p>Information on this site is provided for general informational purposes only and does not constitute legal, tax, financial, or real estate advice. Decisions about selling your home should be made in consultation with qualified professionals.</p>
+    </div>
+    <div class="footer-legal-block">
+      <h6>Equal Housing Opportunity</h6>
+      <p>Purple Forge Capital LLC complies with the federal Fair Housing Act and Massachusetts anti-discrimination laws. We do not discriminate on the basis of race, color, national origin, religion, sex, gender identity, sexual orientation, familial status, disability, age, ancestry, marital status, veteran status, or any other characteristic protected by law.</p>
+    </div>
+    <div class="footer-legal-block">
+      <h6>Accessibility</h6>
+      <p>We are committed to making this site accessible to all users in accordance with WCAG 2.1 AA guidelines. If you experience difficulty accessing content on this site, please contact us at <a href="mailto:purpleforgecapital@gmail.com" style="color:rgba(255,255,255,0.55);">purpleforgecapital@gmail.com</a> or (508) 377-6864 and we will work to provide the information you need in an alternative format.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2025 Purple Forge Capital LLC · All Rights Reserved</span>
+    <span>Massachusetts Real Estate</span>
+  </div>
 </footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieDesc">
+  <h3 id="cookieTitle">We Use Cookies</h3>
+  <p id="cookieDesc">We use essential cookies to make this site work, and optional analytics cookies (such as Google Analytics) to understand how visitors use the site. You can accept all or only the essentials. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn" id="cookieReject" type="button">Essentials Only</button>
+    <button class="cookie-btn primary" id="cookieAccept" type="button">Accept All</button>
+  </div>
+</div>
 
 <script>
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx7uuSVvSCcRMpCo6qZ0E05fZr-vkd_MsMDEhdEgyvIvPTclrN2-SLqmiBemM-WAVd5lw/exec';
@@ -541,16 +683,18 @@ function submitForm(e){
   var msgEl  = document.getElementById('formMessage');
   var btn    = document.getElementById('submitBtn');
   var data = {
-    timestamp: new Date().toLocaleString('en-US', {timeZone:'America/New_York'}),
-    firstName: document.getElementById('firstName').value.trim(),
-    lastName:  document.getElementById('lastName').value.trim(),
-    address:   document.getElementById('address').value.trim(),
-    city:      document.getElementById('city').value.trim(),
-    state:     document.getElementById('state').value.trim(),
-    phone:     document.getElementById('phone').value.trim(),
-    email:     document.getElementById('email').value.trim(),
-    reason:    document.getElementById('reason').value,
-    condition: document.getElementById('condition').value
+    timestamp:        new Date().toLocaleString('en-US', {timeZone:'America/New_York'}),
+    firstName:        document.getElementById('firstName').value.trim(),
+    lastName:         document.getElementById('lastName').value.trim(),
+    address:          document.getElementById('address').value.trim(),
+    city:             document.getElementById('city').value.trim(),
+    state:            document.getElementById('state').value.trim(),
+    phone:            document.getElementById('phone').value.trim(),
+    email:            document.getElementById('email').value.trim(),
+    reason:           document.getElementById('reason').value,
+    condition:        document.getElementById('condition').value,
+    contactConsent:   document.getElementById('consentCheck').checked,
+    marketingConsent: document.getElementById('marketingCheck').checked
   };
   btn.disabled = true;
   btn.textContent = 'Submitting...';
@@ -585,6 +729,26 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-question').forEach(function(b){ b.classList.remove('active'); });
   if(!isOpen){ answer.classList.add('open'); btn.classList.add('active'); }
 }
+
+/* COOKIE CONSENT */
+(function() {
+  var banner = document.getElementById('cookieBanner');
+  var consent = null;
+  try { consent = localStorage.getItem('pfc-cookie-consent'); } catch (e) {}
+  if (!consent) {
+    setTimeout(function(){ banner.classList.add('show'); }, 800);
+  }
+  document.getElementById('cookieAccept').addEventListener('click', function() {
+    try { localStorage.setItem('pfc-cookie-consent', 'all'); } catch (e) {}
+    banner.classList.remove('show');
+    // Hook analytics initialization here, e.g.:
+    // gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
+  });
+  document.getElementById('cookieReject').addEventListener('click', function() {
+    try { localStorage.setItem('pfc-cookie-consent', 'essentials'); } catch (e) {}
+    banner.classList.remove('show');
+  });
+})();
 </script>
 </body>
 </html>
